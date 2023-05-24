@@ -1,37 +1,37 @@
-<img src="thumbnail.png" alt="thumbnail" width="300"/>
+<div class="row">
+   <div class="column">
+      <img src="pythia.png" alt="Project Pythia Logo" width="35%"/>
+   </div>
+   <div class="column">
+      <img src="unidata.png" alt="Unidata Logo" width="35%"/>
+   </div>
+</div>
 
-# (Replace_with_your_title) Cookbook
 
-[![nightly-build](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/cookbook-template/actions/workflows/nightly-build.yaml)
-[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/cookbook-template/main?labpath=notebooks)
+# MetPy Cookbook
 
-This Project Pythia Cookbook covers ... (replace `...` with the main subject of your cookbook ... e.g., _working with radar data in Python_)
+[![nightly-build](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml)
+[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/metpy-cookbook/main?labpath=notebooks)
 
-## Motivation
-
-(Add a few sentences stating why this cookbook will be useful. What skills will you, "the chef", gain once you have reached the end of the cookbook?)
+This Cookbook is the oversized recipe book for all your MetPy needs.
+We provide a gallery of real workflows centered around meteorological data,
+and the building blocks you need to recreate those workflows or cook up brand new ones yourself.
+Create the maps and analyses you've seen from class and professional institutions alike!
 
 ## Authors
 
-[First Author](@first-author), [Second Author](@second-author), etc. _Acknowledge primary content authors here_
+MetPy Maintainers and the MetPy Community.
 
 ### Contributors
 
-<a href="https://github.com/ProjectPythia/cookbook-template/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ProjectPythia/cookbook-template" />
+<a href="https://github.com/ProjectPythia/metpy-cookbook/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=ProjectPythia/metpy-cookbook" />
 </a>
 
 ## Structure
 
-(State one or more sections that will comprise the notebook. E.g., _This cookbook is broken up into two main sections - "Foundations" and "Example Workflows."_ Then, describe each section below.)
+### The MetPy Example Gallery
 
-### Section 1 ( Replace with the title of this section, e.g. "Foundations" )
-
-(Add content for this section, e.g., "The foundational content includes ... ")
-
-### Section 2 ( Replace with the title of this section, e.g. "Example workflows" )
-
-(Add content for this section, e.g., "Example workflows include ... ")
 
 ## Running the Notebooks
 
@@ -58,24 +58,22 @@ Jupyter](https://foundations.projectpythia.org/foundations/getting-started-jupyt
 
 If you are interested in running this material locally on your computer, you will need to follow this workflow:
 
-(Replace "cookbook-example" with the title of your cookbooks)
-
-1. Clone the `https://github.com/ProjectPythia/cookbook-example` repository:
+1. Clone the `https://github.com/ProjectPythia/metpy-cookbook` repository:
 
    ```bash
-    git clone https://github.com/ProjectPythia/cookbook-example.git
+    git clone https://github.com/ProjectPythia/metpy-cookbook.git
    ```
 
-1. Move into the `cookbook-example` directory
+1. Move into the `metpy-cookbook` directory
    ```bash
-   cd cookbook-example
+   cd metpy-cookbook
    ```
 1. Create and activate your conda environment from the `environment.yml` file
    ```bash
    conda env create -f environment.yml
-   conda activate cookbook-example
+   conda activate metpy-cookbook
    ```
-1. Move into the `notebooks` directory and start up Jupyterlab
+1. Move into the `notebooks` directory and start up Jupyter Lab
    ```bash
    cd notebooks/
    jupyter lab
