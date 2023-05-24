@@ -1,25 +1,32 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: Project Pythia Cookbook Template
-author: the <a href="https://projectpythia.org/">Project Pythia</a> Community
-logo: notebooks/images/logos/pythia_logo-white-rtext.svg
-email: projectpythia@ucar.edu
-copyright: "2022"
+title: The MetPy Cookbook
+author: MetPy Maintainers
+logo: pythia.png
+email: support-python@unidata.ucar.edu
+copyright: "2023"
 
 description: A sample cookbook description.
-thumbnail: thumbnail.png
+thumbnail: metpy.png
 tags:
   domains:
-    - sampledomain
+    - meteorology
+    - data access
   packages:
-    - samplepackage
+    - metpy
+    - siphon
+    - cartopy
+    - xarray
+    - pint
 
 execute:
   # To execute notebooks via a binder instead, replace 'cache' with 'binder'
   execute_notebooks: cache
   timeout: 600
-  allow_errors: False # cells with expected failures must set the `raises-exception` cell tag
+  allow_errors: True # cells with expected failures must set the `raises-exception` cell tag
+
+only_build_toc_files: true
 
 # Add a few extensions to help with parsing content
 parse:
@@ -52,12 +59,12 @@ sphinx:
       github_url: https://github.com/ProjectPythia
       twitter_url: https://twitter.com/project_pythia
       icon_links:
-        - name: YouTube
-          url: https://www.youtube.com/channel/UCoZPBqJal5uKpO8ZiwzavCw
+        - name: MetPy Mondays
+          url: https://youtube.com/playlist?list=PLQut5OXpV-0ir4IdllSt1iEZKTwFBa7kO
           icon: fab fa-youtube-square
           type: fontawesome
       launch_buttons:
-        binderhub_url: http://binder.mypythia.org
+        binderhub_url: http://binder.projectpythia.org
         notebook_interface: jupyterlab
       extra_navbar: |
         Theme by <a href="https://projectpythia.org">Project Pythia</a>.<br><br>
