@@ -1,0 +1,11 @@
+thumbnail: metpy.png
+tags:
+  domains:
+    - meteorology
+    - data access
+  packages:
+    - metpy
+    - siphon
+    - cartopy
+    - xarray
+    - pint
