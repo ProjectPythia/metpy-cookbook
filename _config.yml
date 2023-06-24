@@ -4,21 +4,7 @@
 title: The MetPy Cookbook
 author: MetPy Maintainers
 logo: pythia.png
-email: support-python@unidata.ucar.edu
 copyright: "2023"
-
-description: A sample cookbook description.
-thumbnail: metpy.png
-tags:
-  domains:
-    - meteorology
-    - data access
-  packages:
-    - metpy
-    - siphon
-    - cartopy
-    - xarray
-    - pint
 
 execute:
   # To execute notebooks via a binder instead, replace 'cache' with 'binder'
@@ -43,8 +29,9 @@ parse:
 
 sphinx:
   config:
+
     html_favicon: notebooks/images/icons/favicon.ico
-    html_last_updated_fmt: "%-d %B %Y"
+    html_last_updated_fmt: '%-d %B %Y'
     html_theme: sphinx_pythia_theme
     html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
