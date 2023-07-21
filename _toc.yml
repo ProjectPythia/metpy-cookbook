@@ -17,7 +17,7 @@ parts:
       - file: notebooks/Advanced_Sounding
       - file: notebooks/Skew-T_Hodograph_Inset
       - file: notebooks/Skew-T_Layout_Hodograph
-      - file: notebooks/Skew-T-Analysis
+      - file: notebooks/Skew-T_Analysis
       - file: notebooks/Sounding_LCL_Dataset
       - file: notebooks/Sounding_Plotter
       - file: notebooks/Sounding_Calculations
