@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>MetPy Declarative - 300 hPa &#8212; The MetPy Cookbook</title>
+    <title>Using Xarray for Data read and selection &#8212; The MetPy Cookbook</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet">
   <link href="../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Differential Temperature Advection with NARR Data" href="Differential_Temperature_Advection.html" />
-    <link rel="prev" title="Analytic 300-hPa Trough" href="Analytic_300hPa_Trough.html" />
+    <link rel="next" title="MetPy Skew-T Cookbook" href="../Foundational_Sounding.html" />
+    <link rel="prev" title="Miller Composite Chart" href="miller_composite.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -242,8 +242,8 @@ const thebe_selector_output = ".output, .cell_output"
      Analytic 300-hPa Trough
     </a>
    </li>
-   <li class="toctree-l2 current active">
-    <a class="current reference internal" href="#">
+   <li class="toctree-l2">
+    <a class="reference internal" href="Declarative_300hPa.html">
      MetPy Declarative - 300 hPa
     </a>
    </li>
@@ -307,8 +307,8 @@ const thebe_selector_output = ".output, .cell_output"
      Miller Composite Chart
     </a>
    </li>
-   <li class="toctree-l2">
-    <a class="reference internal" href="xarray_500hPa_map.html">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
      Using Xarray for Data read and selection
     </a>
    </li>
@@ -409,7 +409,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="../../_sources/notebooks/gallery/Declarative_300hPa.ipynb"><button type="button"
+        <a class="dropdown-buttons" href="../../_sources/notebooks/gallery/xarray_500hPa_map.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
                 data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
@@ -429,10 +429,10 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/ProjectPythia/cookbook-template//issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/Declarative_300hPa.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/ProjectPythia/cookbook-template//issues/new?title=Issue%20on%20page%20%2Fnotebooks/gallery/xarray_500hPa_map.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
-        <a class="edit-button" href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/gallery/Declarative_300hPa.ipynb"><button
+        <a class="edit-button" href="https://github.com/ProjectPythia/cookbook-template/edit/main/notebooks/gallery/xarray_500hPa_map.ipynb"><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Edit this page"><i class="fas fa-pencil-alt"></i>suggest edit</button></a>
     </div>
@@ -452,7 +452,7 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="http://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/gallery/Declarative_300hPa.ipynb"><button type="button"
+        <a class="binder-button" href="http://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/gallery/xarray_500hPa_map.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -475,13 +475,13 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
             <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#calculate-variable-and-add-to-dataset">
-   Calculate Variable and Add to Dataset
+  <a class="reference internal nav-link" href="#accessing-data-using-xarray">
+   Accessing data using Xarray
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#declarative-plot">
-   Declarative Plot
+  <a class="reference internal nav-link" href="#now-make-the-500-hpa-map">
+   Now make the 500-hPa map
   </a>
  </li>
 </ul>
@@ -495,133 +495,131 @@ All code in Pythia Cookbooks is licensed under Apache 2.0. All other non-code co
               
               <div>
                 
-  <div class="tex2jax_ignore mathjax_ignore section" id="metpy-declarative-300-hpa">
-<h1>MetPy Declarative - 300 hPa<a class="headerlink" href="#metpy-declarative-300-hpa" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
-<p>By: Kevin Goebbert</p>
-<p>This example uses the declarative syntax available through the MetPy
-package to allow a more convenient method for creating simple maps of
-atmospheric data. The key thing the declarative language does is to
-reduce the number of packages that users will need to know in detail and
-instead allow them to set key parameters to get the map they desire. One
-key element is the use of xarray as the data object, which allows
-coordinate information to be associated with atmospheric variables.</p>
+  <div class="tex2jax_ignore mathjax_ignore section" id="using-xarray-for-data-read-and-selection">
+<h1>Using Xarray for Data read and selection<a class="headerlink" href="#using-xarray-for-data-read-and-selection" title="Permalink to this headline"><i class="fas fa-link"></i></a></h1>
+<p>Use Xarray module to read in model data from nomads server.</p>
+<p>This example uses the xarray module to access data from the nomads server for
+archive NAM analysis data via OPeNDAP. Xarray makes it easier to select times
+and levels, although you still have to know the coordinate variable name. A
+simple 500 hPa plot is created after selecting with xarray.</p>
+<p>Import all of our needed modules</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
+<span class="kn">import</span> <span class="nn">cartopy.crs</span> <span class="k">as</span> <span class="nn">ccrs</span>
+<span class="kn">import</span> <span class="nn">cartopy.feature</span> <span class="k">as</span> <span class="nn">cfeature</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
-<span class="kn">from</span> <span class="nn">metpy.plots.declarative</span> <span class="kn">import</span> <span class="o">*</span>
 <span class="kn">from</span> <span class="nn">metpy.units</span> <span class="kn">import</span> <span class="n">units</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">xarray</span> <span class="k">as</span> <span class="nn">xr</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>Open dataset using xarray module and subset global GFS to be over the
-CONUS.</p>
+<div class="section" id="accessing-data-using-xarray">
+<h2>Accessing data using Xarray<a class="headerlink" href="#accessing-data-using-xarray" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ds</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="s1">&#39;https://thredds.ucar.edu/thredds/dodsC/casestudies&#39;</span>
-                     <span class="s1">&#39;/python-gallery/GFS_20101026_1200.nc&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span>
-    <span class="n">lon</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">360</span><span class="o">-</span><span class="mi">150</span><span class="p">,</span> <span class="mi">360</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">lat</span><span class="o">=</span><span class="nb">slice</span><span class="p">(</span><span class="mi">65</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Specify our date/time of product desired</span>
+<span class="n">dt</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2016</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">18</span><span class="p">)</span>
+
+<span class="c1"># Construct our OPeNDAP access URL</span>
+<span class="n">base_url</span> <span class="o">=</span> <span class="s1">&#39;https://www.ncei.noaa.gov/thredds/dodsC/model-namanl-old/&#39;</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">xr</span><span class="o">.</span><span class="n">open_dataset</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">base_url</span><span class="si">}{</span><span class="n">dt</span><span class="si">:</span><span class="s1">%Y%m</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">dt</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">/&#39;</span>
+                       <span class="sa">f</span><span class="s1">&#39;namanl_218_</span><span class="si">{</span><span class="n">dt</span><span class="si">:</span><span class="s1">%Y%m%d</span><span class="si">}</span><span class="s1">_</span><span class="si">{</span><span class="n">dt</span><span class="si">:</span><span class="s1">%H</span><span class="si">}</span><span class="s1">00_000.grb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">parse_cf</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 </div>
-<div class="section" id="calculate-variable-and-add-to-dataset">
-<h2>Calculate Variable and Add to Dataset<a class="headerlink" href="#calculate-variable-and-add-to-dataset" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>Here it is demonstrated how you can calculate a new variable and add it
-to the xarray dataset (ds) so that it can be plotted with the
-declarative syntax. The key to adding a variable to an xarray dataset
-for use in the declarative syntax is the need to add a <code class="docutils literal notranslate"><span class="pre">grid_mapping</span></code>
-and <code class="docutils literal notranslate"><span class="pre">units</span></code> attribute.</p>
+<p>NAM data is in a projected coordinate and you get back the projection
+X and Y values in km</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate New Variables and place into Xarray Dataset</span>
-<span class="n">uwnd</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">]</span>
-<span class="n">vwnd</span> <span class="o">=</span> <span class="n">ds</span><span class="p">[</span><span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span>
-
-<span class="c1"># Compute wind speed using MetPy</span>
-<span class="n">wspd</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">wind_speed</span><span class="p">(</span><span class="n">uwnd</span><span class="p">,</span> <span class="n">vwnd</span><span class="p">)</span>
-
-<span class="c1"># Place wind speed (wspd) into xarray dataset and attach needed attributes</span>
-<span class="n">ds</span><span class="p">[</span><span class="s1">&#39;wind_speed&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">wspd</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a 2-d meshgrid of our x, y coordinates</span>
+<span class="c1"># manually converted to meters (km * 1000)</span>
+<span class="c1">#x, y = np.meshgrid(data[&#39;x&#39;].values * 1000, data[&#39;y&#39;].values * 1000)</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">x</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="s1">&#39;meter&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">y</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">convert_units</span><span class="p">(</span><span class="s1">&#39;meter&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">values</span>
 </pre></div>
 </div>
 </div>
 </div>
-</div>
-<div class="section" id="declarative-plot">
-<h2>Declarative Plot<a class="headerlink" href="#declarative-plot" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
-<p>The following settings create a single panel map plot of 300 hPa
-geopotential heights, wind speed, and wind barbs.</p>
+<p>Getting the valid times in a more useable format</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Countour Plot of Geopotential Heights</span>
-<span class="n">contour</span> <span class="o">=</span> <span class="n">ContourPlot</span><span class="p">()</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">time</span> <span class="o">=</span> <span class="n">datetime</span><span class="p">(</span><span class="mi">2010</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">31</span><span class="p">,</span> <span class="mi">12</span><span class="p">)</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;Geopotential_height_isobaric&#39;</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">linecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">linestyle</span> <span class="o">=</span> <span class="s1">&#39;-&#39;</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">linewidth</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">clabels</span> <span class="o">=</span> <span class="kc">True</span>
-<span class="n">contour</span><span class="o">.</span><span class="n">contours</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">20000</span><span class="p">,</span> <span class="mi">120</span><span class="p">))</span>
-
-<span class="c1"># Colorfilled Plot of Wind Speed</span>
-<span class="n">cfill</span> <span class="o">=</span> <span class="n">FilledContourPlot</span><span class="p">()</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="s1">&#39;wind_speed&#39;</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">colormap</span> <span class="o">=</span> <span class="s1">&#39;BuPu&#39;</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">contours</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">171</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">colorbar</span> <span class="o">=</span> <span class="s1">&#39;vertical&#39;</span>
-<span class="n">cfill</span><span class="o">.</span><span class="n">plot_units</span> <span class="o">=</span> <span class="s1">&#39;kt&#39;</span>
-
-<span class="c1"># Plot wind barbs</span>
-<span class="n">barb</span> <span class="o">=</span> <span class="n">BarbPlot</span><span class="p">()</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">data</span> <span class="o">=</span> <span class="n">ds</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">level</span> <span class="o">=</span> <span class="mi">300</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">field</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">,</span> <span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">skip</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">barblength</span> <span class="o">=</span> <span class="mf">6.5</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">earth_relative</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="n">barb</span><span class="o">.</span><span class="n">plot_units</span> <span class="o">=</span> <span class="s1">&#39;kt&#39;</span>
-
-<span class="c1"># Panel for plot with Map features</span>
-<span class="n">panel</span> <span class="o">=</span> <span class="n">MapPanel</span><span class="p">()</span>
-<span class="n">panel</span><span class="o">.</span><span class="n">layout</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
-<span class="n">panel</span><span class="o">.</span><span class="n">area</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">124</span><span class="p">,</span> <span class="o">-</span><span class="mi">72</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">53</span><span class="p">)</span>
-<span class="n">panel</span><span class="o">.</span><span class="n">projection</span> <span class="o">=</span> <span class="s1">&#39;lcc&#39;</span>
-<span class="n">panel</span><span class="o">.</span><span class="n">layers</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;coastline&#39;</span><span class="p">,</span> <span class="s1">&#39;borders&#39;</span><span class="p">,</span> <span class="s1">&#39;states&#39;</span><span class="p">,</span> <span class="s1">&#39;land&#39;</span><span class="p">]</span>
-<span class="n">panel</span><span class="o">.</span><span class="n">plots</span> <span class="o">=</span> <span class="p">[</span><span class="n">cfill</span><span class="p">,</span> <span class="n">contour</span><span class="p">,</span> <span class="n">barb</span><span class="p">]</span>
-
-<span class="c1"># Bringing it all together</span>
-<span class="n">pc</span> <span class="o">=</span> <span class="n">PanelContainer</span><span class="p">()</span>
-<span class="n">pc</span><span class="o">.</span><span class="n">size</span> <span class="o">=</span> <span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="mi">9</span><span class="p">)</span>
-<span class="n">pc</span><span class="o">.</span><span class="n">panels</span> <span class="o">=</span> <span class="p">[</span><span class="n">panel</span><span class="p">]</span>
-
-<span class="n">pc</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Get the valid times from the file</span>
+<span class="n">vtimes</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">time</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;datetime64[ms]&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="s1">&#39;O&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vtimes</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Could not find variable corresponding to the value of grid_mapping: LatLon_Projection
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[datetime.datetime(2016, 4, 16, 18, 0)]
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Could not find variable corresponding to the value of grid_mapping: LatLon_Projection
+</div>
+</div>
+<p>Xarray has some nice functionality to choose the time and level that
+you specifically want to use. In this example the time variable is ‘time’ and
+the level variable is ‘isobaric1’. Unfortunately, these can be different with
+each file you use, so you’ll always need to check what they are by listing
+the coordinate variable names</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># print(data.Geopotential_height.coords)</span>
+<span class="n">hght_500</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time1</span><span class="o">=</span><span class="n">vtimes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vertical</span><span class="o">=</span><span class="mi">500</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">hPa</span><span class="p">)</span>
+<span class="n">uwnd_500</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;u-component_of_wind_isobaric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time1</span><span class="o">=</span><span class="n">vtimes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vertical</span><span class="o">=</span><span class="mi">500</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">hPa</span><span class="p">)</span>
+<span class="n">vwnd_500</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;v-component_of_wind_isobaric&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">sel</span><span class="p">(</span><span class="n">time1</span><span class="o">=</span><span class="n">vtimes</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">vertical</span><span class="o">=</span><span class="mi">500</span><span class="o">*</span><span class="n">units</span><span class="o">.</span><span class="n">hPa</span><span class="p">)</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Could not find variable corresponding to the value of grid_mapping: LatLon_Projection
+</div>
+</div>
+</div>
+<div class="section" id="now-make-the-500-hpa-map">
+<h2>Now make the 500-hPa map<a class="headerlink" href="#now-make-the-500-hpa-map" title="Permalink to this headline"><i class="fas fa-link"></i></a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Must set data projection, NAM is LCC projection</span>
+<span class="n">datacrs</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">Geopotential_height_isobaric</span><span class="o">.</span><span class="n">metpy</span><span class="o">.</span><span class="n">cartopy_crs</span>
+
+<span class="c1"># A different LCC projection for the plot.</span>
+<span class="n">plotcrs</span> <span class="o">=</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">LambertConformal</span><span class="p">(</span><span class="n">central_latitude</span><span class="o">=</span><span class="mf">45.</span><span class="p">,</span> <span class="n">central_longitude</span><span class="o">=-</span><span class="mf">100.</span><span class="p">,</span>
+                                <span class="n">standard_parallels</span><span class="o">=</span><span class="p">[</span><span class="mi">30</span><span class="p">,</span> <span class="mi">60</span><span class="p">])</span>
+
+<span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">17.</span><span class="p">,</span> <span class="mf">11.</span><span class="p">))</span>
+<span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">axes</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="n">plotcrs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">coastlines</span><span class="p">(</span><span class="s1">&#39;50m&#39;</span><span class="p">,</span> <span class="n">edgecolor</span><span class="o">=</span><span class="s1">&#39;black&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">add_feature</span><span class="p">(</span><span class="n">cfeature</span><span class="o">.</span><span class="n">STATES</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_extent</span><span class="p">([</span><span class="o">-</span><span class="mi">130</span><span class="p">,</span> <span class="o">-</span><span class="mi">67</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="mi">50</span><span class="p">],</span> <span class="n">ccrs</span><span class="o">.</span><span class="n">PlateCarree</span><span class="p">())</span>
+
+<span class="n">clev500</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">5100</span><span class="p">,</span> <span class="mi">6000</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+<span class="n">cs</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">smooth_n_point</span><span class="p">(</span><span class="n">hght_500</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="n">clev500</span><span class="p">,</span>
+                <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">linewidths</span><span class="o">=</span><span class="mf">2.5</span><span class="p">,</span> <span class="n">linestyles</span><span class="o">=</span><span class="s1">&#39;solid&#39;</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">datacrs</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">cs</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">12</span><span class="p">,</span> <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;k&#39;</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inline_spacing</span><span class="o">=</span><span class="mi">8</span><span class="p">,</span>
+          <span class="n">fmt</span><span class="o">=</span><span class="s1">&#39;</span><span class="si">%i</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">rightside_up</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">use_clabeltext</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># Here we put boxes around the clabels with a black boarder white facecolor</span>
+<span class="c1"># `labelTexts` necessary as ~cartopy.mpl.contour.GeoContourSet.clabel</span>
+<span class="c1"># does not return list of texts as of 0.18</span>
+<span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">cs</span><span class="o">.</span><span class="n">labelTexts</span><span class="p">:</span>
+    <span class="n">t</span><span class="o">.</span><span class="n">set_bbox</span><span class="p">({</span><span class="s1">&#39;fc&#39;</span><span class="p">:</span> <span class="s1">&#39;w&#39;</span><span class="p">})</span>
+
+<span class="c1"># Transform Vectors before plotting, then plot wind barbs.</span>
+<span class="n">wind_slice</span> <span class="o">=</span> <span class="nb">slice</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="mi">16</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">barbs</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="n">wind_slice</span><span class="p">],</span> <span class="n">y</span><span class="p">[</span><span class="n">wind_slice</span><span class="p">],</span>
+         <span class="n">uwnd_500</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">wind_slice</span><span class="p">,</span> <span class="n">wind_slice</span><span class="p">],</span> <span class="n">vwnd_500</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="n">wind_slice</span><span class="p">,</span> <span class="n">wind_slice</span><span class="p">],</span>
+         <span class="n">length</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">transform</span><span class="o">=</span><span class="n">datacrs</span><span class="p">)</span>
+
+<span class="c1"># Add some titles to make the plot readable by someone else</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;500-hPa Geopotential Heights (m)&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;VALID: </span><span class="si">{</span><span class="n">vtimes</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">);</span>
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/cartopy/io/__init__.py:241: DownloadWarning: Downloading: https://naturalearth.s3.amazonaws.com/50m_physical/ne_50m_land.zip
-  warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
-</pre></div>
 </div>
-<img alt="../../_images/18a1a2ea106bbb529fb77877b817792ea31fb3663bb9770c41f23cc05e4b372a.png" src="../../_images/18a1a2ea106bbb529fb77877b817792ea31fb3663bb9770c41f23cc05e4b372a.png" />
+<div class="cell_output docutils container">
+<img alt="../../_images/d181f4a31972e6c9b50dd4ea56b58af66479eb93aaae8123f4faefb7d854abe7.png" src="../../_images/d181f4a31972e6c9b50dd4ea56b58af66479eb93aaae8123f4faefb7d854abe7.png" />
 </div>
 </div>
 </div>
@@ -650,17 +648,17 @@ geopotential heights, wind speed, and wind barbs.</p>
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Analytic_300hPa_Trough.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="miller_composite.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Analytic 300-hPa Trough</p>
+            <p class="prev-next-title">Miller Composite Chart</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="Differential_Temperature_Advection.html" title="next page">
+    <a class='right-next' id="next-link" href="../Foundational_Sounding.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Differential Temperature Advection with NARR Data</p>
+        <p class="prev-next-title">MetPy Skew-T Cookbook</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>

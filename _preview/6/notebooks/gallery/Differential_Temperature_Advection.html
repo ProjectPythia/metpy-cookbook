@@ -208,6 +208,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="500hPa_Absolute_Vorticity_winds.html">
+     500 hPa Geopotential Heights, Absolute Vorticity, and Winds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="500hPa_Vorticity_Advection.html">
+     500 hPa Vorticity Advection
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="850hPa_Frontogenesis.html">
      850-hPa Geopotential Heights, Temperature, Frontogenesis, and Winds
     </a>
@@ -215,6 +225,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="850hPa_QVectors.html">
      QVector Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="850hPa_Temperature_Advection.html">
+     850 hPa Temperature Advection
     </a>
    </li>
    <li class="toctree-l2">
@@ -268,6 +283,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Wind_Shear_Vectors_Example.html">
+     Calculating Wind Shear
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="declarative_500_hPa.html">
      Declarative 500-hPa Absolute Vorticity
     </a>
@@ -285,6 +305,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="miller_composite.html">
      Miller Composite Chart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="xarray_500hPa_map.html">
+     Using Xarray for Data read and selection
     </a>
    </li>
   </ul>
@@ -563,9 +588,11 @@ due to absolute vorticity advection is commonly assessed.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2747/3635212219.py:2: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2849/3635212219.py:2: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
   tadv_700 = mpcalc.advection(tmpk_700, uwnd_700, vwnd_700)
-/tmp/ipykernel_2747/3635212219.py:3: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2849/3635212219.py:3: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
   tadv_300 = mpcalc.advection(tmpk_300, uwnd_300, vwnd_300)
 </pre></div>
 </div>
@@ -818,7 +845,7 @@ Lower-right panels using matplotlib’s gridspec to help with spacing.</p>
         
           By MetPy Maintainers.
         
-          Last updated on 15 August 2023.
+          Last updated on 28 August 2023.
         </p>
       </div>
     </div>

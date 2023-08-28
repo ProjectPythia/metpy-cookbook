@@ -54,7 +54,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="MetPy Skew-T Cookbook" href="../Foundational_Sounding.html" />
+    <link rel="next" title="Using Xarray for Data read and selection" href="xarray_500hPa_map.html" />
     <link rel="prev" title="a different category, perhaps?" href="index2.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
@@ -208,6 +208,16 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="500hPa_Absolute_Vorticity_winds.html">
+     500 hPa Geopotential Heights, Absolute Vorticity, and Winds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="500hPa_Vorticity_Advection.html">
+     500 hPa Vorticity Advection
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="850hPa_Frontogenesis.html">
      850-hPa Geopotential Heights, Temperature, Frontogenesis, and Winds
     </a>
@@ -215,6 +225,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="850hPa_QVectors.html">
      QVector Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="850hPa_Temperature_Advection.html">
+     850 hPa Temperature Advection
     </a>
    </li>
    <li class="toctree-l2">
@@ -268,6 +283,11 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Wind_Shear_Vectors_Example.html">
+     Calculating Wind Shear
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="declarative_500_hPa.html">
      Declarative 500-hPa Absolute Vorticity
     </a>
@@ -285,6 +305,11 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      Miller Composite Chart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="xarray_500hPa_map.html">
+     Using Xarray for Data read and selection
     </a>
    </li>
   </ul>
@@ -607,11 +632,11 @@ plotting.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3006/1703524492.py:2: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3195/1703524492.py:2: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
   vort_adv_500 = mpcalc.advection(avor_500, u_500, v_500,) * 1e9
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3006/1703524492.py:2: UserWarning: Latitude and longitude computed on-demand, which may be an expensive operation. To avoid repeating this computation, assign these coordinates ahead of time with .metpy.assign_latitude_longitude().
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_3195/1703524492.py:2: UserWarning: Latitude and longitude computed on-demand, which may be an expensive operation. To avoid repeating this computation, assign these coordinates ahead of time with .metpy.assign_latitude_longitude().
   vort_adv_500 = mpcalc.advection(avor_500, u_500, v_500,) * 1e9
 </pre></div>
 </div>
@@ -804,10 +829,10 @@ plotting.</p>
             <p class="prev-next-title">a different category, perhaps?</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="../Foundational_Sounding.html" title="next page">
+    <a class='right-next' id="next-link" href="xarray_500hPa_map.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">MetPy Skew-T Cookbook</p>
+        <p class="prev-next-title">Using Xarray for Data read and selection</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -856,7 +881,7 @@ plotting.</p>
         
           By MetPy Maintainers.
         
-          Last updated on 15 August 2023.
+          Last updated on 28 August 2023.
         </p>
       </div>
     </div>
