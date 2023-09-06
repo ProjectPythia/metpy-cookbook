@@ -54,8 +54,8 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="a potential entry?" href="index1.html" />
-    <link rel="prev" title="Real Data Cross-Section Example" href="Observational_Data_Cross_Section.html" />
+    <link rel="next" title="Calculating Wind Shear" href="Wind_Shear_Vectors_Example.html" />
+    <link rel="prev" title="Smoothing Contours" href="Smoothing_Contours.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="None">
     
@@ -208,8 +208,33 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="500hPa_Absolute_Vorticity_winds.html">
+     500 hPa Geopotential Heights, Absolute Vorticity, and Winds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="500hPa_Vorticity_Advection.html">
+     500 hPa Vorticity Advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="850hPa_Frontogenesis.html">
+     850-hPa Geopotential Heights, Temperature, Frontogenesis, and Winds
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="850hPa_QVectors.html">
      QVector Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="850hPa_Temperature_Advection.html">
+     850 hPa Temperature Advection
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Ageostrophic_Wind_Example.html">
+     Geostrophic and Ageostrophic Wind
     </a>
    </li>
    <li class="toctree-l2">
@@ -218,8 +243,23 @@ const thebe_selector_output = ".output, .cell_output"
     </a>
    </li>
    <li class="toctree-l2">
+    <a class="reference internal" href="Declarative_300hPa.html">
+     MetPy Declarative - 300 hPa
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Differential_Temperature_Advection.html">
+     Differential Temperature Advection with NARR Data
+    </a>
+   </li>
+   <li class="toctree-l2">
     <a class="reference internal" href="Hovmoller_Diagram.html">
      Hovmoller Diagram Example
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Isentropic_Interpolation.html">
+     Isentropic Analysis
     </a>
    </li>
    <li class="toctree-l2">
@@ -227,9 +267,29 @@ const thebe_selector_output = ".output, .cell_output"
      Real Data Cross-Section Example
     </a>
    </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="PV_baroclinic_isobaric.html">
+     Baroclinic Potential Vorticity Analysis, Divergence, and Winds
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Smoothing_Contours.html">
+     Smoothing Contours
+    </a>
+   </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
      DIFAX Replication
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="Wind_Shear_Vectors_Example.html">
+     Calculating Wind Shear
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="declarative_500_hPa.html">
+     Declarative 500-hPa Absolute Vorticity
     </a>
    </li>
    <li class="toctree-l2">
@@ -240,6 +300,16 @@ const thebe_selector_output = ".output, .cell_output"
    <li class="toctree-l2">
     <a class="reference internal" href="index2.html">
      a different category, perhaps?
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="miller_composite.html">
+     Miller Composite Chart
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="xarray_500hPa_map.html">
+     Using Xarray for Data read and selection
     </a>
    </li>
   </ul>
@@ -838,11 +908,7 @@ add features that resemble the historic DIFAX maps.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/cartopy/io/__init__.py:241: DownloadWarning: Downloading: https://naturalearth.s3.amazonaws.com/50m_physical/ne_50m_land.zip
-  warnings.warn(f&#39;Downloading: {url}&#39;, DownloadWarning)
-</pre></div>
-</div>
-<img alt="../../_images/52f45623907f9b3035ad6f92e6bcf29764f779329f1fc93bd81b88f428085e14.png" src="../../_images/52f45623907f9b3035ad6f92e6bcf29764f779329f1fc93bd81b88f428085e14.png" />
+<img alt="../../_images/82c117ba1c6850a1348d77291c5e73f9e7ceaa52f00f6a0bfb432240989d6387.png" src="../../_images/82c117ba1c6850a1348d77291c5e73f9e7ceaa52f00f6a0bfb432240989d6387.png" />
 </div>
 </div>
 </div>
@@ -871,17 +937,17 @@ add features that resemble the historic DIFAX maps.</p>
               </div>
               <!-- Previous / next buttons -->
 <div class='prev-next-area'> 
-    <a class='left-prev' id="prev-link" href="Observational_Data_Cross_Section.html" title="previous page">
+    <a class='left-prev' id="prev-link" href="Smoothing_Contours.html" title="previous page">
         <i class="fas fa-angle-left"></i>
         <div class="prev-next-info">
             <p class="prev-next-subtitle">previous</p>
-            <p class="prev-next-title">Real Data Cross-Section Example</p>
+            <p class="prev-next-title">Smoothing Contours</p>
         </div>
     </a>
-    <a class='right-next' id="next-link" href="index1.html" title="next page">
+    <a class='right-next' id="next-link" href="Wind_Shear_Vectors_Example.html" title="next page">
     <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">a potential entry?</p>
+        <p class="prev-next-title">Calculating Wind Shear</p>
     </div>
     <i class="fas fa-angle-right"></i>
     </a>
@@ -930,7 +996,7 @@ add features that resemble the historic DIFAX maps.</p>
         
           By MetPy Maintainers.
         
-          Last updated on 21 July 2023.
+          Last updated on 6 September 2023.
         </p>
       </div>
     </div>
