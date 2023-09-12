@@ -553,6 +553,240 @@ Format: <code class="docutils literal notranslate"><span class="pre">datetime(YY
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">gaierror</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connection.py:203,</span> in <span class="ni">HTTPConnection._new_conn</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">202</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">203</span>     <span class="n">sock</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">create_connection</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">204</span>         <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_dns_host</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">port</span><span class="p">),</span>
+<span class="g g-Whitespace">    </span><span class="mi">205</span>         <span class="bp">self</span><span class="o">.</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">206</span>         <span class="n">source_address</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">source_address</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">207</span>         <span class="n">socket_options</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">socket_options</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">208</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span> <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">gaierror</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/util/connection.py:60,</span> in <span class="ni">create_connection</span><span class="nt">(address, timeout, source_address, socket_options)</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="k">raise</span> <span class="n">LocationParseError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;&#39;</span><span class="si">{</span><span class="n">host</span><span class="si">}</span><span class="s2">&#39;, label empty or too long&quot;</span><span class="p">)</span> <span class="kn">from</span> <span class="kc">None</span>
+<span class="ne">---&gt; </span><span class="mi">60</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">61</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/socket.py:955,</span> in <span class="ni">getaddrinfo</span><span class="nt">(host, port, family, type, proto, flags)</span>
+<span class="g g-Whitespace">    </span><span class="mi">954</span> <span class="n">addrlist</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">--&gt; </span><span class="mi">955</span> <span class="k">for</span> <span class="n">res</span> <span class="ow">in</span> <span class="n">_socket</span><span class="o">.</span><span class="n">getaddrinfo</span><span class="p">(</span><span class="n">host</span><span class="p">,</span> <span class="n">port</span><span class="p">,</span> <span class="n">family</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">flags</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">956</span>     <span class="n">af</span><span class="p">,</span> <span class="n">socktype</span><span class="p">,</span> <span class="n">proto</span><span class="p">,</span> <span class="n">canonname</span><span class="p">,</span> <span class="n">sa</span> <span class="o">=</span> <span class="n">res</span>
+
+<span class="ne">gaierror</span>: [Errno -3] Temporary failure in name resolution
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">NameResolutionError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connectionpool.py:790,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span> <span class="c1"># Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">790</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">801</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span> <span class="c1"># Everything went great!</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connectionpool.py:496,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">496</span>     <span class="n">conn</span><span class="o">.</span><span class="n">request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>         <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">499</span>         <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span>         <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">501</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">502</span>         <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">503</span>         <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">504</span>         <span class="n">enforce_content_length</span><span class="o">=</span><span class="n">enforce_content_length</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">505</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">507</span> <span class="c1"># We are swallowing BrokenPipeError (errno.EPIPE) since the server is</span>
+<span class="g g-Whitespace">    </span><span class="mi">508</span> <span class="c1"># legitimately able to close the connection after sending a valid response.</span>
+<span class="g g-Whitespace">    </span><span class="mi">509</span> <span class="c1"># With this behaviour, the received response is still readable.</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connection.py:395,</span> in <span class="ni">HTTPConnection.request</span><span class="nt">(self, method, url, body, headers, chunked, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">394</span>     <span class="bp">self</span><span class="o">.</span><span class="n">putheader</span><span class="p">(</span><span class="n">header</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">395</span> <span class="bp">self</span><span class="o">.</span><span class="n">endheaders</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">397</span> <span class="c1"># If we&#39;re given a body we start sending that in chunks.</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/http/client.py:1278,</span> in <span class="ni">HTTPConnection.endheaders</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1277</span>     <span class="k">raise</span> <span class="n">CannotSendHeader</span><span class="p">()</span>
+<span class="ne">-&gt; </span><span class="mi">1278</span> <span class="bp">self</span><span class="o">.</span><span class="n">_send_output</span><span class="p">(</span><span class="n">message_body</span><span class="p">,</span> <span class="n">encode_chunked</span><span class="o">=</span><span class="n">encode_chunked</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/http/client.py:1038,</span> in <span class="ni">HTTPConnection._send_output</span><span class="nt">(self, message_body, encode_chunked)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1037</span> <span class="k">del</span> <span class="bp">self</span><span class="o">.</span><span class="n">_buffer</span><span class="p">[:]</span>
+<span class="ne">-&gt; </span><span class="mi">1038</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1040</span> <span class="k">if</span> <span class="n">message_body</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1041</span> 
+<span class="g g-Whitespace">   </span><span class="mi">1042</span>     <span class="c1"># create a consistent interface to message_body</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/http/client.py:976,</span> in <span class="ni">HTTPConnection.send</span><span class="nt">(self, data)</span>
+<span class="g g-Whitespace">    </span><span class="mi">975</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">auto_open</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">976</span>     <span class="bp">self</span><span class="o">.</span><span class="n">connect</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">977</span> <span class="k">else</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connection.py:243,</span> in <span class="ni">HTTPConnection.connect</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">242</span> <span class="k">def</span> <span class="nf">connect</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">243</span>     <span class="bp">self</span><span class="o">.</span><span class="n">sock</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_new_conn</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">244</span>     <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">_tunnel_host</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">245</span>         <span class="c1"># If we&#39;re tunneling it means we&#39;re connected to our proxy.</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connection.py:210,</span> in <span class="ni">HTTPConnection._new_conn</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">209</span> <span class="k">except</span> <span class="n">socket</span><span class="o">.</span><span class="n">gaierror</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">210</span>     <span class="k">raise</span> <span class="n">NameResolutionError</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">host</span><span class="p">,</span> <span class="bp">self</span><span class="p">,</span> <span class="n">e</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">e</span>
+<span class="g g-Whitespace">    </span><span class="mi">211</span> <span class="k">except</span> <span class="n">SocketTimeout</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+
+<span class="ne">NameResolutionError</span>: &lt;urllib3.connection.HTTPConnection object at 0x7f08a9345b10&gt;: Failed to resolve &#39;weather.uwyo.edu&#39; ([Errno -3] Temporary failure in name resolution)
+
+<span class="n">The</span> <span class="n">above</span> <span class="n">exception</span> <span class="n">was</span> <span class="n">the</span> <span class="n">direct</span> <span class="n">cause</span> <span class="n">of</span> <span class="n">the</span> <span class="n">following</span> <span class="n">exception</span><span class="p">:</span>
+
+<span class="ne">MaxRetryError</span><span class="g g-Whitespace">                             </span>Traceback (most recent call last)
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/requests/adapters.py:486,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">486</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">489</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">490</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">492</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">497</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">498</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">500</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/connectionpool.py:844,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">842</span>     <span class="n">new_e</span> <span class="o">=</span> <span class="n">ProtocolError</span><span class="p">(</span><span class="s2">&quot;Connection aborted.&quot;</span><span class="p">,</span> <span class="n">new_e</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">844</span> <span class="n">retries</span> <span class="o">=</span> <span class="n">retries</span><span class="o">.</span><span class="n">increment</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">845</span>     <span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">error</span><span class="o">=</span><span class="n">new_e</span><span class="p">,</span> <span class="n">_pool</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span> <span class="n">_stacktrace</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">exc_info</span><span class="p">()[</span><span class="mi">2</span><span class="p">]</span>
+<span class="g g-Whitespace">    </span><span class="mi">846</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">847</span> <span class="n">retries</span><span class="o">.</span><span class="n">sleep</span><span class="p">()</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/urllib3/util/retry.py:515,</span> in <span class="ni">Retry.increment</span><span class="nt">(self, method, url, response, error, _pool, _stacktrace)</span>
+<span class="g g-Whitespace">    </span><span class="mi">514</span>     <span class="n">reason</span> <span class="o">=</span> <span class="n">error</span> <span class="ow">or</span> <span class="n">ResponseError</span><span class="p">(</span><span class="n">cause</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">515</span>     <span class="k">raise</span> <span class="n">MaxRetryError</span><span class="p">(</span><span class="n">_pool</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">reason</span><span class="p">)</span> <span class="kn">from</span> <span class="nn">reason</span>  <span class="c1"># type: ignore[arg-type]</span>
+<span class="g g-Whitespace">    </span><span class="mi">517</span> <span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Incremented Retry for (url=&#39;</span><span class="si">%s</span><span class="s2">&#39;): </span><span class="si">%r</span><span class="s2">&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">new_retry</span><span class="p">)</span>
+
+<span class="ne">MaxRetryError</span>: HTTPConnectionPool(host=&#39;weather.uwyo.edu&#39;, port=80): Max retries exceeded with url: /cgi-bin/sounding/?region=naconf&amp;TYPE=TEXT%3ALIST&amp;YEAR=2016&amp;MONTH=10&amp;FROM=2612&amp;TO=2612&amp;STNM=MPX (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPConnection object at 0x7f08a9345b10&gt;: Failed to resolve &#39;weather.uwyo.edu&#39; ([Errno -3] Temporary failure in name resolution)&quot;))
+
+<span class="n">During</span> <span class="n">handling</span> <span class="n">of</span> <span class="n">the</span> <span class="n">above</span> <span class="n">exception</span><span class="p">,</span> <span class="n">another</span> <span class="n">exception</span> <span class="n">occurred</span><span class="p">:</span>
+
+<span class="ne">ConnectionError</span><span class="g g-Whitespace">                           </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1"># Read remote sounding data based on preferred_date and station</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">sounding_data</span> <span class="o">=</span> <span class="n">WyomingUpperAir</span><span class="o">.</span><span class="n">request_data</span><span class="p">(</span><span class="n">preferred_date</span><span class="p">,</span> <span class="n">station</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/simplewebservice/wyoming.py:50,</span> in <span class="ni">WyomingUpperAir.request_data</span><span class="nt">(cls, time, site_id, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span><span class="w"> </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Retrieve upper air observations from the Wyoming archive.</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span><span class="sd"> Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">df</span> <span class="o">=</span> <span class="n">endpoint</span><span class="o">.</span><span class="n">_get_data</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">site_id</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">df</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/simplewebservice/wyoming.py:70,</span> in <span class="ni">WyomingUpperAir._get_data</span><span class="nt">(self, time, site_id)</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="k">def</span> <span class="nf">_get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">site_id</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Download and parse upper air observations from an online archive.</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="sd">     Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">70</span>     <span class="n">raw_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_data_raw</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">site_id</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="n">tabular_data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;pre&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/simplewebservice/wyoming.py:144,</span> in <span class="ni">WyomingUpperAir._get_data_raw</span><span class="nt">(self, time, site_id)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Download data from the University of Wyoming&#39;s upper air archive.</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span><span class="sd"> Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;?region=naconf&amp;TYPE=TEXT%3ALIST&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>         <span class="s1">&#39;&amp;YEAR={time:%Y}&amp;MONTH={time:%m}&amp;FROM={time:</span><span class="si">%d</span><span class="s1">%H}&amp;TO={time:</span><span class="si">%d</span><span class="s1">%H}&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span>         <span class="s1">&#39;&amp;STNM=</span><span class="si">{stid}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">stid</span><span class="o">=</span><span class="n">site_id</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">144</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span> <span class="c1"># See if the return is valid, but has no data</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Can&#39;t&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/http_util.py:457,</span> in <span class="ni">HTTPEndPoint.get_path</span><span class="nt">(self, path, query)</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span> <span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Make a GET request, optionally including a query, to a relative path.</span>
+<span class="g g-Whitespace">    </span><span class="mi">436</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span><span class="sd">     The path of the request includes a path on top of the base URL</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">455</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">456</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">457</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url_path</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">query</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/http_util.py:486,</span> in <span class="ni">HTTPEndPoint.get</span><span class="nt">(self, path, params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">459</span> <span class="k">def</span> <span class="nf">get</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">460</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Make a GET request, optionally including a parameters, to a path.</span>
+<span class="g g-Whitespace">    </span><span class="mi">461</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">462</span><span class="sd">     The path of the request is the full URL.</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">484</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">485</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">486</span>     <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_session</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">487</span>     <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span> <span class="o">!=</span> <span class="mi">200</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">488</span>         <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">headers</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;Content-Type&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;text/html&#39;</span><span class="p">):</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/requests/sessions.py:602,</span> in <span class="ni">Session.get</span><span class="nt">(self, url, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">594</span><span class="w"> </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request. Returns :class:`Response` object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">595</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">596</span><span class="sd"> :param url: URL for the new :class:`Request` object.</span>
+<span class="g g-Whitespace">    </span><span class="mi">597</span><span class="sd"> :param \*\*kwargs: Optional arguments that ``request`` takes.</span>
+<span class="g g-Whitespace">    </span><span class="mi">598</span><span class="sd"> :rtype: requests.Response</span>
+<span class="g g-Whitespace">    </span><span class="mi">599</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">601</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">setdefault</span><span class="p">(</span><span class="s2">&quot;allow_redirects&quot;</span><span class="p">,</span> <span class="kc">True</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">602</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="s2">&quot;GET&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File /usr/share/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/requests/adapters.py:519,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">515</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="n">reason</span><span class="p">,</span> <span class="n">_SSLError</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">516</span>         <span class="c1"># This branch is for urllib3 v1.22 and later.</span>
+<span class="g g-Whitespace">    </span><span class="mi">517</span>         <span class="k">raise</span> <span class="n">SSLError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">519</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">521</span> <span class="k">except</span> <span class="n">ClosedPoolError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">522</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+
+<span class="ne">ConnectionError</span>: HTTPConnectionPool(host=&#39;weather.uwyo.edu&#39;, port=80): Max retries exceeded with url: /cgi-bin/sounding/?region=naconf&amp;TYPE=TEXT%3ALIST&amp;YEAR=2016&amp;MONTH=10&amp;FROM=2612&amp;TO=2612&amp;STNM=MPX (Caused by NameResolutionError(&quot;&lt;urllib3.connection.HTTPConnection object at 0x7f08a9345b10&gt;: Failed to resolve &#39;weather.uwyo.edu&#39; ([Errno -3] Temporary failure in name resolution)&quot;))
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -561,244 +795,15 @@ Format: <code class="docutils literal notranslate"><span class="pre">datetime(YY
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">sounding_data</span>
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>pressure</th>
-      <th>height</th>
-      <th>temperature</th>
-      <th>dewpoint</th>
-      <th>direction</th>
-      <th>speed</th>
-      <th>u_wind</th>
-      <th>v_wind</th>
-      <th>station</th>
-      <th>station_number</th>
-      <th>time</th>
-      <th>latitude</th>
-      <th>longitude</th>
-      <th>elevation</th>
-      <th>pw</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>0</th>
-      <td>984.0</td>
-      <td>287</td>
-      <td>6.6</td>
-      <td>6.2</td>
-      <td>105.0</td>
-      <td>3.0</td>
-      <td>-2.897777</td>
-      <td>0.776457</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>1</th>
-      <td>979.0</td>
-      <td>329</td>
-      <td>6.4</td>
-      <td>5.4</td>
-      <td>105.0</td>
-      <td>6.0</td>
-      <td>-5.795555</td>
-      <td>1.552914</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>2</th>
-      <td>946.3</td>
-      <td>610</td>
-      <td>4.6</td>
-      <td>4.0</td>
-      <td>105.0</td>
-      <td>23.0</td>
-      <td>-22.216294</td>
-      <td>5.952838</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>3</th>
-      <td>925.0</td>
-      <td>798</td>
-      <td>3.4</td>
-      <td>3.0</td>
-      <td>115.0</td>
-      <td>25.0</td>
-      <td>-22.657695</td>
-      <td>10.565457</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>4</th>
-      <td>911.8</td>
-      <td>914</td>
-      <td>2.8</td>
-      <td>2.4</td>
-      <td>120.0</td>
-      <td>27.0</td>
-      <td>-23.382686</td>
-      <td>13.500000</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>...</th>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-      <td>...</td>
-    </tr>
-    <tr>
-      <th>123</th>
-      <td>20.0</td>
-      <td>26230</td>
-      <td>-55.9</td>
-      <td>-69.9</td>
-      <td>260.0</td>
-      <td>20.0</td>
-      <td>19.696155</td>
-      <td>3.472964</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>124</th>
-      <td>19.5</td>
-      <td>26391</td>
-      <td>-55.1</td>
-      <td>-70.1</td>
-      <td>262.0</td>
-      <td>20.0</td>
-      <td>19.805361</td>
-      <td>2.783462</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>125</th>
-      <td>16.6</td>
-      <td>27432</td>
-      <td>-57.1</td>
-      <td>-69.7</td>
-      <td>275.0</td>
-      <td>23.0</td>
-      <td>22.912478</td>
-      <td>-2.004582</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>126</th>
-      <td>15.0</td>
-      <td>28042</td>
-      <td>-58.3</td>
-      <td>-69.5</td>
-      <td>290.0</td>
-      <td>22.0</td>
-      <td>20.673238</td>
-      <td>-7.524443</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-    <tr>
-      <th>127</th>
-      <td>14.8</td>
-      <td>28138</td>
-      <td>-58.5</td>
-      <td>-69.5</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>NaN</td>
-      <td>MPX</td>
-      <td>72649</td>
-      <td>2016-10-26 12:00:00</td>
-      <td>44.85</td>
-      <td>-93.56</td>
-      <td>287.0</td>
-      <td>24.32</td>
-    </tr>
-  </tbody>
-</table>
-<p>128 rows × 15 columns</p>
-</div></div></div>
+<span class="ne">NameError</span>: name &#39;sounding_data&#39; is not defined
+</pre></div>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="assign-units">
@@ -813,6 +818,18 @@ Format: <code class="docutils literal notranslate"><span class="pre">datetime(YY
 <span class="n">wind_dir</span> <span class="o">=</span> <span class="n">sounding_data</span><span class="p">[</span><span class="s1">&#39;direction&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">degrees</span>
 <span class="n">u</span> <span class="o">=</span> <span class="n">sounding_data</span><span class="p">[</span><span class="s1">&#39;u_wind&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">knots</span>
 <span class="n">v</span> <span class="o">=</span> <span class="n">sounding_data</span><span class="p">[</span><span class="s1">&#39;v_wind&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">knots</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pres</span> <span class="o">=</span> <span class="n">sounding_data</span><span class="p">[</span><span class="s1">&#39;pressure&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">hPa</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">temp</span> <span class="o">=</span> <span class="n">sounding_data</span><span class="p">[</span><span class="s1">&#39;temperature&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">degC</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">dewpoint</span> <span class="o">=</span> <span class="n">sounding_data</span><span class="p">[</span><span class="s1">&#39;dewpoint&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span> <span class="o">*</span> <span class="n">units</span><span class="o">.</span><span class="n">degC</span>
+
+<span class="ne">NameError</span>: name &#39;sounding_data&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -856,7 +873,19 @@ Format: <code class="docutils literal notranslate"><span class="pre">datetime(YY
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/02e43476b590503d8a3c0db7c8378741786f5d0adacd62fb55784457cdd841cf.png" src="../_images/02e43476b590503d8a3c0db7c8378741786f5d0adacd62fb55784457cdd841cf.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">skew</span> <span class="o">=</span> <span class="n">SkewT</span><span class="p">(</span><span class="n">fig</span><span class="p">,</span> <span class="n">rotation</span><span class="o">=</span><span class="mi">45</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="c1"># Plot temperature and dewpoint lines</span>
+<span class="ne">----&gt; </span><span class="mi">6</span> <span class="n">skew</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pres</span><span class="p">,</span> <span class="n">temp</span><span class="p">,</span> <span class="s1">&#39;red&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">skew</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">pres</span><span class="p">,</span> <span class="n">dewpoint</span><span class="p">,</span> <span class="s1">&#39;green&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Plot wind barbs</span>
+
+<span class="ne">NameError</span>: name &#39;pres&#39; is not defined
+</pre></div>
+</div>
+<img alt="../_images/f0e7f32ae949d8fd726c19af3dbf463dd0b23d1c953af0f99de3e467a3b918b2.png" src="../_images/f0e7f32ae949d8fd726c19af3dbf463dd0b23d1c953af0f99de3e467a3b918b2.png" />
 </div>
 </div>
 </div>
@@ -944,7 +973,7 @@ Format: <code class="docutils literal notranslate"><span class="pre">datetime(YY
         
           By MetPy Maintainers.
         
-          Last updated on 6 September 2023.
+          Last updated on 12 September 2023.
         </p>
       </div>
     </div>
