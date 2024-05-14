@@ -43,7 +43,7 @@
   <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="../../_static/doctools.js?v=888ff710"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
@@ -79,7 +79,7 @@
     <link rel="prev" title="Smoothing Contours" href="Smoothing_Contours.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="2 April 2024"/>
+    <meta name="docbuild:last-update" content="14 May 2024"/>
   </head>
   
   
@@ -907,12 +907,12 @@ add features that resemble the historic DIFAX maps.</p>
 <span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># Start figure and set graphics extent</span>
 <span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">17</span><span class="p">,</span> <span class="mi">15</span><span class="p">))</span>
 
-<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/pandas/core/frame.py:4090,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4088</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
-<span class="g g-Whitespace">   </span><span class="mi">4089</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="ne">-&gt; </span><span class="mi">4090</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">4091</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">4092</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/pandas/core/frame.py:4102,</span> in <span class="ni">DataFrame.__getitem__</span><span class="nt">(self, key)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4100</span> <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">nlevels</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">4101</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_getitem_multilevel</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">4102</span> <span class="n">indexer</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">get_loc</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">4103</span> <span class="k">if</span> <span class="n">is_integer</span><span class="p">(</span><span class="n">indexer</span><span class="p">):</span>
+<span class="g g-Whitespace">   </span><span class="mi">4104</span>     <span class="n">indexer</span> <span class="o">=</span> <span class="p">[</span><span class="n">indexer</span><span class="p">]</span>
 
 <span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/pandas/core/indexes/base.py:3812,</span> in <span class="ni">Index.get_loc</span><span class="nt">(self, key)</span>
 <span class="g g-Whitespace">   </span><span class="mi">3807</span>     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">casted_key</span><span class="p">,</span> <span class="nb">slice</span><span class="p">)</span> <span class="ow">or</span> <span class="p">(</span>
@@ -1248,7 +1248,7 @@ By MetPy Maintainers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 2 April 2024.
+  Last updated on 14 May 2024.
   <br/>
 </p>
   </div>
@@ -1302,7 +1302,35 @@ By MetPy Maintainers
         
           By MetPy Maintainers.
         
-          Last updated on 2 April 2024.
+          Last updated on 14 May 2024.
+        </p>
+      </div>
+    </div>
+  </div></div>
+      
+        <div class="footer-item"><div class="container-fluid footer-extra">
+    <div class="container">
+      <center>
+        Theme by <a href="https://projectpythia.org">Project Pythia</a>. All code
+        in Pythia Cookbooks is licensed under
+        <a href="https://opensource.org/license/apache-2-0">Apache 2.0</a>. All
+        other non-code content is licensed under
+        <a href="https://creativecommons.org/licenses/by/4.0/">
+          Creative Commons BY 4.0 (CC BY 4.0)</a
+        >.
+      </center>
+      <br /><br />
+      <div class="row">
+        <p class="m-0">
+          <img
+            src="../../_static/footer-logo-nsf.png"
+            style="float: left; width: 60px; height: 60px; margin-right: 1rem"
+          />
+          This material is based upon work supported by the National Science
+          Foundation under Grant Nos. 2026863 and 2026899. Any opinions, findings,
+          and conclusions or recommendations expressed in this material are those
+          of the author(s) and do not necessarily reflect the views of the
+          National Science Foundation.
         </p>
       </div>
     </div>
