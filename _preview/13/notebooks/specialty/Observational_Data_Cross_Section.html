@@ -375,10 +375,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/index.html">Skew-T Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/index.html">Skew-T Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Advanced_Sounding.html">Advanced Sounding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Foundational_Sounding.html">MetPy Skew-T Cookbook</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Analysis.html">Skew-T Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Hodograph_Inset.html">Hodograph Inset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Layout_Hodograph.html">Skew-T with Complex Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_Calculations.html">Sounding Calculation Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_LCL_Dataset.html">Sounding as Dataset Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_Plotter.html">Sounding Plotter</a></li>
 </ul>
 </details></li>
 <li class="toctree-l1 has-children"><a class="reference internal" href="../convective/index.html">Convective Calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convective/MUCAPE.html">Most-Unstable Convective Available Potential Energy (MUCAPE)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../convective/miller_composite.html">Miller Composite Chart</a></li>
 </ul>
 </details></li>
@@ -388,7 +398,9 @@
 <li class="toctree-l2"><a class="reference internal" href="Smoothing_Contours.html">Smoothing Contours</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../declarative/index.html">Simplified Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../declarative/index.html">Simplified Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../declarative/Declarative_300hPa.html">MetPy Declarative - 300 hPa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../declarative/declarative_500_hPa.html">Declarative 500-hPa Absolute Vorticity</a></li>
 </ul>
 </details></li>
 </ul>
@@ -696,7 +708,7 @@ data.</p>
 <span class="g g-Whitespace">    </span><span class="mi">495</span>                                                                 <span class="n">text</span><span class="p">))</span>
 <span class="g g-Whitespace">    </span><span class="mi">496</span> <span class="k">return</span> <span class="n">resp</span>
 
-<span class="ne">HTTPError</span>: Error accessing http://weather.uwyo.edu/cgi-bin/sounding/?region=naconf&amp;TYPE=TEXT%3ALIST&amp;YEAR=2019&amp;MONTH=06&amp;FROM=0100&amp;TO=0100&amp;STNM=OAX
+<span class="ne">HTTPError</span>: Error accessing http://weather.uwyo.edu/cgi-bin/sounding/?region=naconf&amp;TYPE=TEXT%3ALIST&amp;YEAR=2019&amp;MONTH=06&amp;FROM=0100&amp;TO=0100&amp;STNM=DNR
 <span class="n">Server</span> <span class="n">Error</span> <span class="p">(</span><span class="mi">503</span><span class="p">:</span> <span class="n">Sorry</span><span class="p">,</span> <span class="n">the</span> <span class="n">server</span> <span class="ow">is</span> <span class="n">too</span> <span class="n">busy</span> <span class="n">to</span> <span class="n">process</span> <span class="n">your</span> <span class="n">request</span><span class="o">.</span>
 <span class="n">Please</span> <span class="k">try</span> <span class="n">again</span> <span class="n">later</span><span class="o">.</span>
 <span class="p">)</span>
@@ -722,14 +734,15 @@ u-component of the wind, and v-component of the wind.</p>
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">xsect</span> <span class="o">=</span> <span class="n">radiosonde_cross_section</span><span class="p">(</span><span class="n">stn_list</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
 
-<span class="nn">Cell In[3], line 68,</span> in <span class="ni">radiosonde_cross_section</span><span class="nt">(stns, data, start, end, step)</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="k">for</span> <span class="n">station</span><span class="p">,</span> <span class="n">loc</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">stns</span><span class="p">,</span> <span class="nb">range</span><span class="p">(</span><span class="n">nstns</span><span class="p">)):</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="k">if</span> <span class="n">key</span> <span class="o">==</span> <span class="s1">&#39;pressure&#39;</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">68</span>         <span class="n">lats</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">station</span><span class="p">]</span><span class="o">.</span><span class="n">latitude</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span>         <span class="n">lons</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">station</span><span class="p">]</span><span class="o">.</span><span class="n">longitude</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span>         <span class="n">elev</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">station</span><span class="p">]</span><span class="o">.</span><span class="n">elevation</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nn">Cell In[3], line 59,</span> in <span class="ni">radiosonde_cross_section</span><span class="nt">(stns, data, start, end, step)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="n">lons</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="n">elev</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">---&gt; </span><span class="mi">59</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">stns</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">keys</span><span class="p">()[:</span><span class="mi">8</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">tmp_grid</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="c1"># Interpolate all variables for each radiosonde observation</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="c1"># Temperature, Dewpoint, U-wind, V-wind</span>
 
-<span class="ne">KeyError</span>: &#39;OAX&#39;
+<span class="ne">KeyError</span>: &#39;DNR&#39;
 </pre></div>
 </div>
 </div>

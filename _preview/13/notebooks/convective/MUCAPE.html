@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; The MetPy Cookbook</title>
+    <title>Most-Unstable Convective Available Potential Energy (MUCAPE) &#8212; The MetPy Cookbook</title>
   
   
   
@@ -214,10 +214,6 @@
   
 
   
-    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
-      <span class="fa-solid fa-outdent"></span>
-    </button>
-  
 </div>
 
     </header>
@@ -357,7 +353,7 @@
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MetPy Gallery</span></p>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1 has-children"><a class="reference internal" href="../synoptic/index.html">Synoptic Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/250hPa_Hemispheric_Plot.html">A 250-hPa Hemispheric Map using Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/500hPa_Absolute_Vorticity_winds.html">500 hPa Geopotential Heights, Absolute Vorticity, and Winds</a></li>
@@ -375,10 +371,20 @@
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/index.html">Skew-T Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/index.html">Skew-T Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Advanced_Sounding.html">Advanced Sounding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Foundational_Sounding.html">MetPy Skew-T Cookbook</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Analysis.html">Skew-T Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Hodograph_Inset.html">Hodograph Inset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Layout_Hodograph.html">Skew-T with Complex Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_Calculations.html">Sounding Calculation Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_LCL_Dataset.html">Sounding as Dataset Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_Plotter.html">Sounding Plotter</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Convective Calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Convective Calculations</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Most-Unstable Convective Available Potential Energy (MUCAPE)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="miller_composite.html">Miller Composite Chart</a></li>
 </ul>
 </details></li>
@@ -388,7 +394,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../specialty/Smoothing_Contours.html">Smoothing Contours</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="../declarative/index.html">Simplified Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../declarative/index.html">Simplified Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../declarative/Declarative_300hPa.html">MetPy Declarative - 300 hPa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../declarative/declarative_500_hPa.html">Declarative 500-hPa Absolute Vorticity</a></li>
 </ul>
 </details></li>
 </ul>
@@ -420,7 +428,10 @@
 <div id="searchbox"></div>
                   <article class="bd-article">
                     
-  <div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="most-unstable-convective-available-potential-energy-mucape">
+<h1>Most-Unstable Convective Available Potential Energy (MUCAPE)<a class="headerlink" href="#most-unstable-convective-available-potential-energy-mucape" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
+<p>Calculate MUCAPE on a grid of netCDF data using MetPy.</p>
+<div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">## importing all the packages we might need later for our calculation</span>
 <span class="kn">import</span> <span class="nn">metpy.calc</span> <span class="k">as</span> <span class="nn">mpcalc</span>
@@ -618,6 +629,7 @@
 <img alt="../../_images/21c237d3fd230e98f672b9e348752d38f83911a499c7913e454f891a8c90d984.png" src="../../_images/21c237d3fd230e98f672b9e348752d38f83911a499c7913e454f891a8c90d984.png" />
 </div>
 </div>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -674,21 +686,6 @@
 
               
               
-                
-                  <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> On this page
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
-</ul>
-
-  </nav></div>
-
-</div></div>
                 
               
 
@@ -890,9 +887,7 @@ document.write(`
   </button>
 `);
 </script>
-<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</button>
+
 </div></div>
       
     </div>
