@@ -2,11 +2,13 @@
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="./" >
+<html lang="en" data-content_root="../../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><title>Search - The MetPy Cookbook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>MetPy’s Simplified Plotting Interface &#8212; The MetPy Cookbook</title>
   
   
   
@@ -16,42 +18,42 @@
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-<link href="_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
-    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
-    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
-    <link rel="stylesheet" type="text/css" href="_static/custom.css?v=c54c090a" />
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.1e8bd061cd6da7fc9cf755528e8ffc24.min.css?v=0a3b3ea7" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c54c090a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
-<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
-  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
-    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
-    <script src="_static/doctools.js?v=9a2dae69"></script>
-    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
-    <script src="_static/copybutton.js?v=f281be69"></script>
-    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script src="../../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="_static/design-tabs.js?v=36754332"></script>
+    <script src="../../_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-T52X8HNYE8"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -60,7 +62,7 @@
                 gtag('config', 'G-T52X8HNYE8');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script async="async" src="../../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -69,13 +71,12 @@
                 gtag('config', 'G-T52X8HNYE8');
             </script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'search';</script>
-  <script src="_static/searchtools.js"></script>
-  <script src="_static/language_data.js"></script>
-  <script src="searchindex.js"></script>
-    <link rel="icon" href="_static/favicon.ico"/>
-    <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="#" />
+    <script>DOCUMENTATION_OPTIONS.pagename = 'notebooks/declarative/index';</script>
+    <link rel="icon" href="../../_static/favicon.ico"/>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="MetPy Declarative - 300 hPa" href="Declarative_300hPa.html" />
+    <link rel="prev" title="Smoothing Contours" href="../specialty/Smoothing_Contours.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
     <meta name="docbuild:last-update" content="14 June 2024"/>
@@ -114,8 +115,8 @@
       
     
     
-    <img src="_static/metpy_150x150.png" class="logo__image only-light" alt="The MetPy Cookbook - Home"/>
-    <script>document.write(`<img src="_static/metpy_150x150.png" class="logo__image only-dark" alt="The MetPy Cookbook - Home"/>`);</script>
+    <img src="../../_static/metpy_150x150.png" class="logo__image only-light" alt="The MetPy Cookbook - Home"/>
+    <script>document.write(`<img src="../../_static/metpy_150x150.png" class="logo__image only-dark" alt="The MetPy Cookbook - Home"/>`);</script>
   
   
 </a></div>
@@ -227,8 +228,6 @@
         
         
         
-          
-        
         <div class="bd-sidebar-primary bd-sidebar">
           
 
@@ -334,7 +333,7 @@
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 <form class="bd-search d-flex align-items-center"
-      action="#"
+      action="../../search.html"
       method="get">
   <i class="fa-solid fa-magnifying-glass"></i>
   <input type="search"
@@ -354,58 +353,58 @@
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
-                <a class="reference internal" href="README.html">
+                <a class="reference internal" href="../../README.html">
                     MetPy Cookbook
                 </a>
             </li>
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MetPy Gallery</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/synoptic/index.html">Synoptic Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/250hPa_Hemispheric_Plot.html">A 250-hPa Hemispheric Map using Python</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/500hPa_Absolute_Vorticity_winds.html">500 hPa Geopotential Heights, Absolute Vorticity, and Winds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/500hPa_Vorticity_Advection.html">500 hPa Vorticity Advection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/850hPa_Frontogenesis.html">850-hPa Geopotential Heights, Temperature, Frontogenesis, and Winds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/850hPa_QVectors.html">QVector Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/850hPa_Temperature_Advection.html">850 hPa Temperature Advection</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Ageostrophic_Wind_Example.html">Geostrophic and Ageostrophic Wind</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Analytic_300hPa_Trough.html">Analytic 300-hPa Trough</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Differential_Temperature_Advection.html">Differential Temperature Advection with NARR Data</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Geostrophic_Wind_And_Few_More.html">Geostrophic Wind and Other Calcuations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Isentropic_Interpolation.html">Isentropic Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/PV_baroclinic_isobaric.html">Baroclinic Potential Vorticity Analysis, Divergence, and Winds</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Upperair_Obs.html">DIFAX Replication</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/Wind_Shear_Vectors_Example.html">Calculating Wind Shear</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/synoptic/xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../synoptic/index.html">Synoptic Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/250hPa_Hemispheric_Plot.html">A 250-hPa Hemispheric Map using Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/500hPa_Absolute_Vorticity_winds.html">500 hPa Geopotential Heights, Absolute Vorticity, and Winds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/500hPa_Vorticity_Advection.html">500 hPa Vorticity Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/850hPa_Frontogenesis.html">850-hPa Geopotential Heights, Temperature, Frontogenesis, and Winds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/850hPa_QVectors.html">QVector Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/850hPa_Temperature_Advection.html">850 hPa Temperature Advection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Ageostrophic_Wind_Example.html">Geostrophic and Ageostrophic Wind</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Analytic_300hPa_Trough.html">Analytic 300-hPa Trough</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Differential_Temperature_Advection.html">Differential Temperature Advection with NARR Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Geostrophic_Wind_And_Few_More.html">Geostrophic Wind and Other Calcuations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Isentropic_Interpolation.html">Isentropic Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/PV_baroclinic_isobaric.html">Baroclinic Potential Vorticity Analysis, Divergence, and Winds</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Upperair_Obs.html">DIFAX Replication</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Wind_Shear_Vectors_Example.html">Calculating Wind Shear</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/skewt/index.html">Skew-T Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Advanced_Sounding.html">Advanced Sounding</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Foundational_Sounding.html">MetPy Skew-T Cookbook</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../skewt/index.html">Skew-T Analysis</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Advanced_Sounding.html">Advanced Sounding</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Foundational_Sounding.html">MetPy Skew-T Cookbook</a></li>
 
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Skew-T_Analysis.html">Skew-T Analysis</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Skew-T_Hodograph_Inset.html">Hodograph Inset</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Skew-T_Layout_Hodograph.html">Skew-T with Complex Layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Sounding_Calculations.html">Sounding Calculation Examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Sounding_LCL_Dataset.html">Sounding as Dataset Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/skewt/Sounding_Plotter.html">Sounding Plotter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Analysis.html">Skew-T Analysis</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Hodograph_Inset.html">Hodograph Inset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Skew-T_Layout_Hodograph.html">Skew-T with Complex Layout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_Calculations.html">Sounding Calculation Examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_LCL_Dataset.html">Sounding as Dataset Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skewt/Sounding_Plotter.html">Sounding Plotter</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/convective/index.html">Convective Calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/convective/MUCAPE.html">Most-Unstable Convective Available Potential Energy (MUCAPE)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/convective/TCPW.html">Total Column Precipitable Water (TCPW)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/convective/miller_composite.html">Miller Composite Chart</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../convective/index.html">Convective Calculations</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../convective/MUCAPE.html">Most-Unstable Convective Available Potential Energy (MUCAPE)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../convective/TCPW.html">Total Column Precipitable Water (TCPW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../convective/miller_composite.html">Miller Composite Chart</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/specialty/index.html">Specialty Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/specialty/Hovmoller_Diagram.html">Hovmoller Diagram Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/specialty/Observational_Data_Cross_Section.html">Real Data Cross-Section Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/specialty/Smoothing_Contours.html">Smoothing Contours</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../specialty/index.html">Specialty Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../specialty/Hovmoller_Diagram.html">Hovmoller Diagram Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../specialty/Observational_Data_Cross_Section.html">Real Data Cross-Section Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../specialty/Smoothing_Contours.html">Smoothing Contours</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebooks/declarative/index.html">Simplified Plotting</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/declarative/Declarative_300hPa.html">MetPy Declarative - 300 hPa</a></li>
-<li class="toctree-l2"><a class="reference internal" href="notebooks/declarative/declarative_500_hPa.html">Declarative 500-hPa Absolute Vorticity</a></li>
+<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Simplified Plotting</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="Declarative_300hPa.html">MetPy Declarative - 300 hPa</a></li>
+<li class="toctree-l2"><a class="reference internal" href="declarative_500_hPa.html">Declarative 500-hPa Absolute Vorticity</a></li>
 </ul>
 </details></li>
 </ul>
@@ -432,43 +431,39 @@
               <div class="bd-article-container">
 
                 
-  <div class="bd-search-container">
-    <h1>Search</h1>
-    <noscript>
-      <div class="admonition error">
-        <p class="admonition-title">Error</p>
-        <p>Please activate JavaScript to enable the search functionality.</p>
-      </div>
-    </noscript>
-    
-<form class="bd-search d-flex align-items-center"
-      action="#"
-      method="get">
-  <i class="fa-solid fa-magnifying-glass"></i>
-  <input type="search"
-         class="form-control"
-         name="q"
-         id="search-input"
-         placeholder="Search..."
-         aria-label="Search..."
-         autocomplete="off"
-         autocorrect="off"
-         autocapitalize="off"
-         spellcheck="false"/>
-  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
-</form>
-    <div id="search-results"></div>
-  </div>
-  <script>
-    // Activate the search field on page load
-    let searchInput = document.querySelector("form.bd-search input");
-    if (searchInput) {
-        searchInput.focus();
-        searchInput.select();
-        console.log("[PST]: Set focus on search field.");
-    }
-  </script>
+                  
+                  
+<div id="searchbox"></div>
+                  <article class="bd-article">
+                    
+  <section class="tex2jax_ignore mathjax_ignore" id="metpys-simplified-plotting-interface">
+<h1>MetPy’s Simplified Plotting Interface<a class="headerlink" href="#metpys-simplified-plotting-interface" title="Link to this heading"><i class="fas fa-link"></i></a></h1>
+<p>TBD</p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
 
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./notebooks/declarative"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                  </article>
 
                 
                 
@@ -478,6 +473,24 @@
                   <footer class="prev-next-footer">
                     
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="../specialty/Smoothing_Contours.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Smoothing Contours</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="Declarative_300hPa.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">MetPy Declarative - 300 hPa</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                   </footer>
                 
@@ -537,7 +550,24 @@
       
       
       
-      <li><a href="https://github.com/ProjectPythia/metpy-cookbook/issues/new?title=Issue%20on%20page%20%2Fsearch.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/ProjectPythia/metpy-cookbook/edit/main/notebooks/declarative/index.md" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ProjectPythia/metpy-cookbook/issues/new?title=Issue%20on%20page%20%2Fnotebooks/declarative/index.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -549,6 +579,54 @@
   </span>
 <span class="btn__text-container">Open issue</span>
 </a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/notebooks/declarative/index.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
 </li>
       
   </ul>
@@ -642,8 +720,8 @@ By MetPy Maintainers
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
-<script src="_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
      
@@ -659,13 +737,13 @@ By MetPy Maintainers
     <div class="container-xl">
       <div class="row d-flex flex-wrap align-items-center">
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="NCAR" src="_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
+          <img alt="NCAR" src="../../_images/NSF-NCAR_Lockup-UCAR-Dark_102523.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="Unidata" src="_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
+          <img alt="Unidata" src="../../_images/Unidata_logo_horizontal_1200x300.svg" style="width: 100%">
         </div>
         <div class="d-flex col-lg-3 col-md-4 col-sm-6 p-2 mx-auto">
-          <img alt="UAlbany" src="_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
+          <img alt="UAlbany" src="../../_images/UAlbany-A2-logo-purple-gold.svg" style="width: 100%">
         </div>
       </div>
     </div>
@@ -700,7 +778,7 @@ By MetPy Maintainers
       <div class="row">
         <p class="m-0">
           <img
-            src="_static/footer-logo-nsf.png"
+            src="../../_static/footer-logo-nsf.png"
             style="float: left; width: 60px; height: 60px; margin-right: 1rem"
           />
           This material is based upon work supported by the National Science
