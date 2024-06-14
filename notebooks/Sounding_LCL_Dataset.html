@@ -14,22 +14,22 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-pythia-theme.min.css?v=e502140d" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -38,16 +38,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=c54c090a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -79,7 +79,7 @@
     <link rel="prev" title="Skew-T Analysis" href="Skew-T_Analysis.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="14 May 2024"/>
+    <meta name="docbuild:last-update" content="14 June 2024"/>
   </head>
   
   
@@ -87,15 +87,15 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
   <div class="pst-scroll-pixel-helper"></div>
     <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class=" navbar-header-items__start">
@@ -220,9 +220,9 @@
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -241,7 +241,9 @@
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+          
+          
+            <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
   
   <li class="nav-item">
     
@@ -280,6 +282,7 @@
   
   
 </ul></div>
+          
         
       </div>
     
@@ -361,7 +364,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MetPy Gallery</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="notebook-template.html">What organization</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="notebook-template.html">What organization</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="gallery/250hPa_Hemispheric_Plot.html">A 250-hPa Hemispheric Map using Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gallery/500hPa_Absolute_Vorticity_winds.html">500 hPa Geopotential Heights, Absolute Vorticity, and Winds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gallery/500hPa_Vorticity_Advection.html">500 hPa Vorticity Advection</a></li>
@@ -385,7 +388,7 @@
 <li class="toctree-l2"><a class="reference internal" href="gallery/miller_composite.html">Miller Composite Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gallery/xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="gallery/index1.html">do we want</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gallery/index2.html">for these "chapters"?</a></li>
 </ul>
@@ -862,7 +865,7 @@ Coordinates:
 Data variables:
     ambient_temperature  (isobaric) float64 568B &lt;Quantity([ 22.2         21....
     ambient_dew_point    (isobaric) float64 568B &lt;Quantity([ 21.          20....
-    parcel_temperature   (isobaric) float64 568B &lt;Quantity([295.35       294....</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-ed28c860-743b-426e-850b-e87e3a491527' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-ed28c860-743b-426e-850b-e87e3a491527' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>isobaric</span>: 71</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-49a48634-0e7e-4644-87d3-feb44419b605' class='xr-section-summary-in' type='checkbox'  checked><label for='section-49a48634-0e7e-4644-87d3-feb44419b605' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>966.0 953.0 949.1 ... 104.0 100.0</div><input id='attrs-e15693af-2cb9-4972-a7c9-e6bca85bcb2d' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e15693af-2cb9-4972-a7c9-e6bca85bcb2d' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-cf4c0d51-b68c-438e-93d0-5902973941d7' class='xr-var-data-in' type='checkbox'><label for='data-cf4c0d51-b68c-438e-93d0-5902973941d7' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>hectopascal</dd><dt><span>standard_name :</span></dt><dd>air_pressure</dd></dl></div><div class='xr-var-data'><pre>array([966.      , 953.      , 949.085447, 936.9     , 925.      , 904.5     ,
+    parcel_temperature   (isobaric) float64 568B &lt;Quantity([295.35       294....</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-cd825fba-5516-46e0-9fc3-fc6d5e4598cf' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-cd825fba-5516-46e0-9fc3-fc6d5e4598cf' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>isobaric</span>: 71</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-00c9a4dd-3dd8-419e-890f-74f2a68ca318' class='xr-section-summary-in' type='checkbox'  checked><label for='section-00c9a4dd-3dd8-419e-890f-74f2a68ca318' class='xr-section-summary' >Coordinates: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>isobaric</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>966.0 953.0 949.1 ... 104.0 100.0</div><input id='attrs-f21452a9-d888-4bd3-b773-7245e11d3c12' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-f21452a9-d888-4bd3-b773-7245e11d3c12' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-acd40221-bf6a-4bcb-b78a-44904523ff92' class='xr-var-data-in' type='checkbox'><label for='data-acd40221-bf6a-4bcb-b78a-44904523ff92' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>units :</span></dt><dd>hectopascal</dd><dt><span>standard_name :</span></dt><dd>air_pressure</dd></dl></div><div class='xr-var-data'><pre>array([966.      , 953.      , 949.085447, 936.9     , 925.      , 904.5     ,
        896.      , 890.      , 886.      , 873.3     , 873.      , 850.      ,
        846.      , 813.8     , 802.      , 785.      , 757.1     , 730.1     ,
        700.      , 653.3     , 639.      , 606.      , 605.6     , 584.      ,
@@ -873,7 +876,7 @@ Data variables:
        197.      , 196.5     , 190.      , 181.      , 173.      , 159.      ,
        155.      , 154.2     , 150.      , 148.      , 146.9     , 146.      ,
        142.      , 140.      , 137.      , 133.3     , 127.      , 126.      ,
-       120.9     , 111.      , 109.      , 104.      , 100.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-07140271-f66b-405b-a8f7-9f26122f4e63' class='xr-section-summary-in' type='checkbox'  checked><label for='section-07140271-f66b-405b-a8f7-9f26122f4e63' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>ambient_temperature</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>&lt;Quantity([ 22.2         21.4   ...</div><input id='attrs-54cda898-144c-4398-a1cf-fe503cb1da6e' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-54cda898-144c-4398-a1cf-fe503cb1da6e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-3f8a9c15-76df-4597-8e75-93ad136b0c29' class='xr-var-data-in' type='checkbox'><label for='data-3f8a9c15-76df-4597-8e75-93ad136b0c29' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd></dl></div><div class='xr-var-data'><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[22.2 21.4 21.254116023095705 20.8 20.4 19.3 18.8 20.0 22.2 23.2 23.2 22.0<br> 21.8 19.2 18.2 16.5 13.7 10.9 7.6 2.3 0.6 -2.9 -2.9 -4.5 -4.4 -4.3 -3.7<br> -3.3 -3.9 -3.9 -6.3 -6.3 -11.1 -13.7 -17.1 -18.3 -23.9 -24.9 -26.6 -37.9<br> -40.7 -43.5 -46.3 -52.1 -52.3 -54.1 -55.9 -56.5 -56.5 -56.5 -56.5 -57.9<br> -56.9 -59.3 -58.9 -59.0 -59.5 -59.9 -59.2 -58.7 -57.9 -56.7 -56.5 -57.7<br> -59.8 -60.1 -61.0 -62.9 -64.3 -63.3 -64.3]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>degree_Celsius</td></tr></tbody></table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>ambient_dew_point</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>&lt;Quantity([ 21.          20.7   ...</div><input id='attrs-5805c0f5-b76e-43bf-a558-fe609f41ef34' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-5805c0f5-b76e-43bf-a558-fe609f41ef34' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6ae9754a-69ad-479d-91d7-4641a8390bf0' class='xr-var-data-in' type='checkbox'><label for='data-6ae9754a-69ad-479d-91d7-4641a8390bf0' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>dew_point_temperature</dd></dl></div><div class='xr-var-data'><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[21.0 20.7 20.65137200769857 20.5 20.4 19.3 18.8 20.0 19.0 13.3 13.2 6.0<br> 3.8 -1.7 -3.8 -4.7 -6.2 -7.7 -9.4 -10.9 -11.4 -12.9 -12.9 -14.5 -14.4<br> -14.3 -24.7 -36.3 -31.9 -31.8 -27.4 -27.3 -29.1 -31.3 -34.1 -32.3 -37.0<br> -37.9 -39.3 -48.1 -50.3 -52.5 -55.3 -62.1 -62.3 -64.1 -65.9 -66.5 -66.5<br> -66.5 -66.5 -67.9 -66.9 -69.3 -68.9 -69.0 -69.5 -69.9 -69.2 -68.7 -67.9<br> -66.7 -66.5 -67.7 -69.8 -70.1 -71.0 -72.9 -73.3 -73.3 -74.3]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>degree_Celsius</td></tr></tbody></table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>parcel_temperature</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>&lt;Quantity([295.35       294.2088...</div><input id='attrs-642391ee-8c26-47ae-8fb8-066da97bdf84' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-642391ee-8c26-47ae-8fb8-066da97bdf84' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-39d0be5d-7570-480c-b1ee-10ec37a6d74d' class='xr-var-data-in' type='checkbox'><label for='data-39d0be5d-7570-480c-b1ee-10ec37a6d74d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>air_temperature_of_lifted_parcel</dd></dl></div><div class='xr-var-data'><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[295.34999999999997 294.20887396170207 293.86308176800566<br> 293.4099943495534 292.9605366516025 292.1693871501292 291.83484364691674<br> 291.5963220045112 291.4361974572428 290.9217817645201 290.90951768975583<br> 289.95324507449203 289.78361661237284 288.3800144790221<br> 287.84779705003416 287.0630619897046 285.72612496785456 284.3692057775776<br> 282.77536756242387 280.10893536751206 279.23922058870653<br> 277.1232960053971 277.09664797744415 275.61892684782913 275.5274725480196<br> 275.47810502547424 275.1229494554376 274.69078901458516 273.9555257073228<br> 273.9331702389749 272.29917542768135 272.26757383165204 269.0055991481036<br> 267.0737915535153 264.5137445137853 263.4630088557104 259.2614990911962<br> 258.4793263502483 257.10515037181517 247.80090458906085<br> 245.34140461782874 242.81799102546762 240.01050451730532<br> 231.91012214705813 231.6657585024839 224.0871178675781 221.24235897557074<br> 218.27111704455257 217.35421917769239 217.2002322728787<br> 215.16743230137462 212.25494058759193 209.5659695215338 204.6164100334584<br> 203.1411807522514 202.84269696570666 201.25632033826017<br> 200.48922395508256 200.0640310151734 199.71438559354843<br> 198.14083284802103 197.341775309911 196.1273252033388 194.6024080711456<br> 191.9334291191558 191.50099464989884 189.25609420942234<br> 184.69553916489568 183.73898623782966 181.291232491021 179.27154995827192]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>kelvin</td></tr></tbody></table></div></li></ul></div></li><li class='xr-section-item'><input id='section-08315db6-7973-4912-87ff-440ed4e4ebbb' class='xr-section-summary-in' type='checkbox'  ><label for='section-08315db6-7973-4912-87ff-440ed4e4ebbb' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-68da02ed-0939-4a31-879f-c8daaecd2553' class='xr-index-data-in' type='checkbox'/><label for='index-68da02ed-0939-4a31-879f-c8daaecd2553' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([            966.0,             953.0, 949.0854466197347,
+       120.9     , 111.      , 109.      , 104.      , 100.      ])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-e55032dc-9127-4610-a2ad-455c68c07707' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e55032dc-9127-4610-a2ad-455c68c07707' class='xr-section-summary' >Data variables: <span>(3)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>ambient_temperature</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>&lt;Quantity([ 22.2         21.4   ...</div><input id='attrs-aad774eb-6e8a-4331-b66f-ca9482f3523c' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-aad774eb-6e8a-4331-b66f-ca9482f3523c' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-73729b53-ab8d-4c06-8362-1f9a574113ee' class='xr-var-data-in' type='checkbox'><label for='data-73729b53-ab8d-4c06-8362-1f9a574113ee' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>air_temperature</dd></dl></div><div class='xr-var-data'><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[22.2 21.4 21.254116023095705 20.8 20.4 19.3 18.8 20.0 22.2 23.2 23.2 22.0 21.8 19.2 18.2 16.5 13.7 10.9 7.6 2.3 0.6 -2.9 -2.9 -4.5 -4.4 -4.3 -3.7 -3.3 -3.9 -3.9 -6.3 -6.3 -11.1 -13.7 -17.1 -18.3 -23.9 -24.9 -26.6 -37.9 -40.7 -43.5 -46.3 -52.1 -52.3 -54.1 -55.9 -56.5 -56.5 -56.5 -56.5 -57.9 -56.9 -59.3 -58.9 -59.0 -59.5 -59.9 -59.2 -58.7 -57.9 -56.7 -56.5 -57.7 -59.8 -60.1 -61.0 -62.9 -64.3 -63.3 -64.3]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>degree_Celsius</td></tr></tbody></table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>ambient_dew_point</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>&lt;Quantity([ 21.          20.7   ...</div><input id='attrs-e11cbdb3-cc68-453e-b8f5-54bb5f77c7bb' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-e11cbdb3-cc68-453e-b8f5-54bb5f77c7bb' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-6b39bdc8-3101-4d72-b01a-da092ac2ee94' class='xr-var-data-in' type='checkbox'><label for='data-6b39bdc8-3101-4d72-b01a-da092ac2ee94' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>standard_name :</span></dt><dd>dew_point_temperature</dd></dl></div><div class='xr-var-data'><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[21.0 20.7 20.65137200769857 20.5 20.4 19.3 18.8 20.0 19.0 13.3 13.2 6.0 3.8 -1.7 -3.8 -4.7 -6.2 -7.7 -9.4 -10.9 -11.4 -12.9 -12.9 -14.5 -14.4 -14.3 -24.7 -36.3 -31.9 -31.8 -27.4 -27.3 -29.1 -31.3 -34.1 -32.3 -37.0 -37.9 -39.3 -48.1 -50.3 -52.5 -55.3 -62.1 -62.3 -64.1 -65.9 -66.5 -66.5 -66.5 -66.5 -67.9 -66.9 -69.3 -68.9 -69.0 -69.5 -69.9 -69.2 -68.7 -67.9 -66.7 -66.5 -67.7 -69.8 -70.1 -71.0 -72.9 -73.3 -73.3 -74.3]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>degree_Celsius</td></tr></tbody></table></div></li><li class='xr-var-item'><div class='xr-var-name'><span>parcel_temperature</span></div><div class='xr-var-dims'>(isobaric)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>&lt;Quantity([295.35       294.2088...</div><input id='attrs-a987fca3-5edf-43aa-886e-1015a49fe515' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-a987fca3-5edf-43aa-886e-1015a49fe515' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-21fb8ac2-bb90-4884-a672-e72b94b5b15d' class='xr-var-data-in' type='checkbox'><label for='data-21fb8ac2-bb90-4884-a672-e72b94b5b15d' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>long_name :</span></dt><dd>air_temperature_of_lifted_parcel</dd></dl></div><div class='xr-var-data'><table><tbody><tr><th>Magnitude</th><td style='text-align:left;'><pre>[295.34999999999997 294.20887396170207 293.86308176800566 293.4099943495534 292.9605366516025 292.1693871501292 291.83484364691674 291.5963220045112 291.4361974572428 290.9217817645201 290.90951768975583 289.95324507449203 289.78361661237284 288.3800144790221 287.84779705003416 287.0630619897046 285.72612496785456 284.3692057775776 282.77536756242387 280.10893536751206 279.23922058870653 277.1232960053971 277.09664797744415 275.61892684782913 275.5274725480196 275.47810502547424 275.1229494554376 274.69078901458516 273.9555257073228 273.9331702389749 272.29917542768135 272.26757383165204 269.0055991481036 267.0737915535153 264.5137445137853 263.4630088557104 259.2614990911962 258.4793263502483 257.10515037181517 247.80090458906085 245.34140461782874 242.81799102546762 240.01050451730532 231.91012214705813 231.6657585024839 224.0871178675781 221.24235897557074 218.27111704455257 217.35421917769239 217.2002322728787 215.16743230137462 212.25494058759193 209.5659695215338 204.6164100334584 203.1411807522514 202.84269696570666 201.25632033826017 200.48922395508256 200.0640310151734 199.71438559354843 198.14083284802103 197.341775309911 196.1273252033388 194.6024080711456 191.9334291191558 191.50099464989884 189.25609420942234 184.69553916489568 183.73898623782966 181.291232491021 179.27154995827192]</pre></td></tr><tr><th>Units</th><td style='text-align:left;'>kelvin</td></tr></tbody></table></div></li></ul></div></li><li class='xr-section-item'><input id='section-4493583c-ee58-46e2-80c2-e4b42653a106' class='xr-section-summary-in' type='checkbox'  ><label for='section-4493583c-ee58-46e2-80c2-e4b42653a106' class='xr-section-summary' >Indexes: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>isobaric</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-bf19d9d5-cbf5-4715-bbc5-d51d152fb28f' class='xr-index-data-in' type='checkbox'/><label for='index-bf19d9d5-cbf5-4715-bbc5-d51d152fb28f' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([            966.0,             953.0, 949.0854466197347,
                    936.9,             925.0,             904.5,
                    896.0,             890.0,             886.0,
                    873.3,             873.0,             850.0,
@@ -897,7 +900,7 @@ Data variables:
                    133.3,             127.0,             126.0,
                    120.9,             111.0,             109.0,
                    104.0,             100.0],
-      dtype=&#x27;float64&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-32a0b48a-822b-489f-8e76-cfa171e40381' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-32a0b48a-822b-489f-8e76-cfa171e40381' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float64&#x27;, name=&#x27;isobaric&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8de8cf22-8136-4aa6-a690-bc3140e0a2e9' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-8de8cf22-8136-4aa6-a690-bc3140e0a2e9' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 </section>
 <section id="create-sounding-plot">
@@ -1030,9 +1033,9 @@ Data variables:
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -1057,14 +1060,14 @@ Data variables:
       
       <li><a href="http://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/Sounding_LCL_Dataset.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -1221,9 +1224,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -1258,7 +1261,7 @@ By MetPy Maintainers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 14 May 2024.
+  Last updated on 14 June 2024.
   <br/>
 </p>
   </div>
@@ -1275,8 +1278,8 @@ By MetPy Maintainers
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
      
@@ -1312,7 +1315,7 @@ By MetPy Maintainers
         
           By MetPy Maintainers.
         
-          Last updated on 14 May 2024.
+          Last updated on 14 June 2024.
         </p>
       </div>
     </div>

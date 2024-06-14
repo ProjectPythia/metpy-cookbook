@@ -14,22 +14,22 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../../_static/styles/theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/bootstrap.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-<link href="../../_static/styles/pydata-sphinx-theme.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
+  <link href="../../_static/styles/theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
 
   
-  <link href="../../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=8d27b9dea8ad943066ae" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+  <link href="../../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=3ee479438cf8b5e0d341" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=fa44fd50" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=e502140d" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-pythia-theme.min.css?v=ba7ce088" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
@@ -38,16 +38,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css?v=c54c090a" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae" />
-<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae" />
-  <script src="../../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=8d27b9dea8ad943066ae"></script>
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341" />
+  <script src="../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=3ee479438cf8b5e0d341"></script>
 
     <script src="../../_static/documentation_options.js?v=9eb32ce0"></script>
     <script src="../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../../_static/copybutton.js?v=f281be69"></script>
-    <script src="../../_static/scripts/sphinx-book-theme.js?v=efea14e4"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
@@ -79,7 +79,7 @@
     <link rel="prev" title="Isentropic Analysis" href="Isentropic_Interpolation.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="14 May 2024"/>
+    <meta name="docbuild:last-update" content="14 June 2024"/>
   </head>
   
   
@@ -87,15 +87,15 @@
 
   
   
-  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
 
   
   <div class="pst-scroll-pixel-helper"></div>
     <header class="bd-header navbar navbar-dark navbar-expand-lg bg-dark fixed-top bd-navbar shadow" id="navbar-main">
 <div class="bd-header__inner bd-page-width">
-  <label class="sidebar-toggle primary-toggle" for="__primary">
+  <button class="sidebar-toggle primary-toggle" aria-label="Site navigation">
     <span class="fa-solid fa-bars"></span>
-  </label>
+  </button>
   
   
   <div class=" navbar-header-items__start">
@@ -220,9 +220,9 @@
   
 
   
-    <label class="sidebar-toggle secondary-toggle" for="__secondary" tabindex="0">
+    <button class="sidebar-toggle secondary-toggle" aria-label="On this page">
       <span class="fa-solid fa-outdent"></span>
-    </label>
+    </button>
   
 </div>
 
@@ -241,7 +241,9 @@
     
       <div class="sidebar-header-items__center">
         
-          <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
+          
+          
+            <div class="navbar-item"><ul id="navbar-main-elements" class="navbar-nav">
   
   <li class="nav-item">
     
@@ -280,6 +282,7 @@
   
   
 </ul></div>
+          
         
       </div>
     
@@ -361,7 +364,7 @@
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">The MetPy Gallery</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="../notebook-template.html">What organization</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../notebook-template.html">What organization</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="250hPa_Hemispheric_Plot.html">A 250-hPa Hemispheric Map using Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="500hPa_Absolute_Vorticity_winds.html">500 hPa Geopotential Heights, Absolute Vorticity, and Winds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="500hPa_Vorticity_Advection.html">500 hPa Vorticity Advection</a></li>
@@ -385,7 +388,7 @@
 <li class="toctree-l2"><a class="reference internal" href="miller_composite.html">Miller Composite Chart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="xarray_500hPa_map.html">Using Xarray for Data read and selection</a></li>
 </ul>
-</li>
+</details></li>
 <li class="toctree-l1"><a class="reference internal" href="index1.html">do we want</a></li>
 <li class="toctree-l1"><a class="reference internal" href="index2.html">for these "chapters"?</a></li>
 </ul>
@@ -641,6 +644,77 @@ data.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">HTTPError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Loop over stations to get data and put into dictionary</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="k">for</span> <span class="n">station</span> <span class="ow">in</span> <span class="n">stn_list</span><span class="p">:</span>
+<span class="ne">----&gt; </span><span class="mi">6</span>     <span class="n">df</span><span class="p">[</span><span class="n">station</span><span class="p">]</span> <span class="o">=</span> <span class="n">WyomingUpperAir</span><span class="o">.</span><span class="n">request_data</span><span class="p">(</span><span class="n">date</span><span class="p">,</span> <span class="n">station</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/simplewebservice/wyoming.py:50,</span> in <span class="ni">WyomingUpperAir.request_data</span><span class="nt">(cls, time, site_id, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span><span class="w"> </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Retrieve upper air observations from the Wyoming archive.</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span><span class="sd"> Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">49</span> <span class="n">endpoint</span> <span class="o">=</span> <span class="bp">cls</span><span class="p">()</span>
+<span class="ne">---&gt; </span><span class="mi">50</span> <span class="n">df</span> <span class="o">=</span> <span class="n">endpoint</span><span class="o">.</span><span class="n">_get_data</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">site_id</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="k">return</span> <span class="n">df</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/simplewebservice/wyoming.py:70,</span> in <span class="ni">WyomingUpperAir._get_data</span><span class="nt">(self, time, site_id)</span>
+<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="k">def</span> <span class="nf">_get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">time</span><span class="p">,</span> <span class="n">site_id</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">54</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Download and parse upper air observations from an online archive.</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span><span class="sd">     Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">     </span><span class="mi">68</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">69</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">70</span>     <span class="n">raw_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_data_raw</span><span class="p">(</span><span class="n">time</span><span class="p">,</span> <span class="n">site_id</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">raw_data</span><span class="p">,</span> <span class="s1">&#39;html.parser&#39;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">72</span>     <span class="n">tabular_data</span> <span class="o">=</span> <span class="n">StringIO</span><span class="p">(</span><span class="n">soup</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s1">&#39;pre&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">contents</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/simplewebservice/wyoming.py:144,</span> in <span class="ni">WyomingUpperAir._get_data_raw</span><span class="nt">(self, time, site_id)</span>
+<span class="g g-Whitespace">    </span><span class="mi">126</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;Download data from the University of Wyoming&#39;s upper air archive.</span>
+<span class="g g-Whitespace">    </span><span class="mi">127</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">128</span><span class="sd"> Parameters</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">138</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">139</span><span class="sd"> &quot;&quot;&quot;</span>
+<span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="n">path</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;?region=naconf&amp;TYPE=TEXT%3ALIST&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">141</span>         <span class="s1">&#39;&amp;YEAR={time:%Y}&amp;MONTH={time:%m}&amp;FROM={time:</span><span class="si">%d</span><span class="s1">%H}&amp;TO={time:</span><span class="si">%d</span><span class="s1">%H}&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">142</span>         <span class="s1">&#39;&amp;STNM=</span><span class="si">{stid}</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">time</span><span class="o">=</span><span class="n">time</span><span class="p">,</span> <span class="n">stid</span><span class="o">=</span><span class="n">site_id</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">144</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_path</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">145</span> <span class="c1"># See if the return is valid, but has no data</span>
+<span class="g g-Whitespace">    </span><span class="mi">146</span> <span class="k">if</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;Can&#39;t&quot;</span><span class="p">)</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">:</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/http_util.py:457,</span> in <span class="ni">HTTPEndPoint.get_path</span><span class="nt">(self, path, query)</span>
+<span class="g g-Whitespace">    </span><span class="mi">434</span> <span class="k">def</span> <span class="nf">get_path</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">path</span><span class="p">,</span> <span class="n">query</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="g g-Whitespace">    </span><span class="mi">435</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Make a GET request, optionally including a query, to a relative path.</span>
+<span class="g g-Whitespace">    </span><span class="mi">436</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">437</span><span class="sd">     The path of the request includes a path on top of the base URL</span>
+<span class="sd">   (...)</span>
+<span class="g g-Whitespace">    </span><span class="mi">455</span><span class="sd"> </span>
+<span class="g g-Whitespace">    </span><span class="mi">456</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">--&gt; </span><span class="mi">457</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">url_path</span><span class="p">(</span><span class="n">path</span><span class="p">),</span> <span class="n">query</span><span class="p">)</span>
+
+<span class="nn">File ~/miniconda3/envs/cookbook-dev/lib/python3.10/site-packages/siphon/http_util.py:492,</span> in <span class="ni">HTTPEndPoint.get</span><span class="nt">(self, path, params)</span>
+<span class="g g-Whitespace">    </span><span class="mi">490</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">491</span>         <span class="n">text</span> <span class="o">=</span> <span class="n">resp</span><span class="o">.</span><span class="n">text</span>
+<span class="ne">--&gt; </span><span class="mi">492</span>     <span class="k">raise</span> <span class="n">requests</span><span class="o">.</span><span class="n">HTTPError</span><span class="p">(</span><span class="s1">&#39;Error accessing </span><span class="si">{0}</span><span class="se">\n</span><span class="s1">&#39;</span>
+<span class="g g-Whitespace">    </span><span class="mi">493</span>                              <span class="s1">&#39;Server Error (</span><span class="si">{1:d}</span><span class="s1">: </span><span class="si">{2}</span><span class="s1">)&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">resp</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">494</span>                                                                 <span class="n">resp</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">495</span>                                                                 <span class="n">text</span><span class="p">))</span>
+<span class="g g-Whitespace">    </span><span class="mi">496</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="ne">HTTPError</span>: Error accessing http://weather.uwyo.edu/cgi-bin/sounding/?region=naconf&amp;TYPE=TEXT%3ALIST&amp;YEAR=2019&amp;MONTH=06&amp;FROM=0100&amp;TO=0100&amp;STNM=DNR
+<span class="n">Server</span> <span class="n">Error</span> <span class="p">(</span><span class="mi">503</span><span class="p">:</span> <span class="n">Sorry</span><span class="p">,</span> <span class="n">the</span> <span class="n">server</span> <span class="ow">is</span> <span class="n">too</span> <span class="n">busy</span> <span class="n">to</span> <span class="n">process</span> <span class="n">your</span> <span class="n">request</span><span class="o">.</span>
+<span class="n">Please</span> <span class="k">try</span> <span class="n">again</span> <span class="n">later</span><span class="o">.</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="create-interpolated-fields">
@@ -651,6 +725,24 @@ u-component of the wind, and v-component of the wind.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">xsect</span> <span class="o">=</span> <span class="n">radiosonde_cross_section</span><span class="p">(</span><span class="n">stn_list</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyError</span><span class="g g-Whitespace">                                  </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">xsect</span> <span class="o">=</span> <span class="n">radiosonde_cross_section</span><span class="p">(</span><span class="n">stn_list</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+
+<span class="nn">Cell In[3], line 59,</span> in <span class="ni">radiosonde_cross_section</span><span class="nt">(stns, data, start, end, step)</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="n">lons</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="n">elev</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="ne">---&gt; </span><span class="mi">59</span> <span class="n">keys</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">stns</span><span class="p">[</span><span class="mi">0</span><span class="p">]]</span><span class="o">.</span><span class="n">keys</span><span class="p">()[:</span><span class="mi">8</span><span class="p">]</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="n">tmp_grid</span> <span class="o">=</span> <span class="nb">dict</span><span class="o">.</span><span class="n">fromkeys</span><span class="p">(</span><span class="n">keys</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="c1"># Interpolate all variables for each radiosonde observation</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="c1"># Temperature, Dewpoint, U-wind, V-wind</span>
+
+<span class="ne">KeyError</span>: &#39;DNR&#39;
 </pre></div>
 </div>
 </div>
@@ -672,6 +764,23 @@ specifically potential temperature and mixing ratio</p>
 <span class="n">mixrat</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">mixing_ratio_from_relative_humidity</span><span class="p">(</span><span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;p_grid&#39;</span><span class="p">],</span>
                                                     <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;grid_data&#39;</span><span class="p">][</span><span class="s1">&#39;temperature&#39;</span><span class="p">],</span>
                                                     <span class="n">relhum</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">potemp</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">potential_temperature</span><span class="p">(</span>
+<span class="ne">----&gt; </span><span class="mi">2</span>     <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;p_grid&#39;</span><span class="p">],</span> <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;grid_data&#39;</span><span class="p">][</span><span class="s1">&#39;temperature&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">relhum</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">relative_humidity_from_dewpoint</span><span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;grid_data&#39;</span><span class="p">][</span><span class="s1">&#39;temperature&#39;</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;grid_data&#39;</span><span class="p">][</span><span class="s1">&#39;dewpoint&#39;</span><span class="p">])</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">mixrat</span> <span class="o">=</span> <span class="n">mpcalc</span><span class="o">.</span><span class="n">mixing_ratio_from_relative_humidity</span><span class="p">(</span><span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;p_grid&#39;</span><span class="p">],</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>                                                     <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;grid_data&#39;</span><span class="p">][</span><span class="s1">&#39;temperature&#39;</span><span class="p">],</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>                                                     <span class="n">relhum</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;xsect&#39; is not defined
 </pre></div>
 </div>
 </div>
@@ -735,7 +844,21 @@ radiosonde wind observations are plotted as barbs on this plot.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../../_images/83b6b19d1c5a7c9faff56f8bc32e1086b6d09ddbc68c38c8bd9595b3c94f244b.png" src="../../_images/83b6b19d1c5a7c9faff56f8bc32e1086b6d09ddbc68c38c8bd9595b3c94f244b.png" />
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">8</span><span class="p">],</span> <span class="n">line</span> <span class="mi">19</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="n">ax</span><span class="o">.</span><span class="n">yaxis_inverted</span><span class="p">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="c1"># Plot the sudo elevation on the cross section</span>
+<span class="ne">---&gt; </span><span class="mi">19</span> <span class="n">ax</span><span class="o">.</span><span class="n">fill_between</span><span class="p">(</span><span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;obs_distance&#39;</span><span class="p">],</span> <span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;elevation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">m</span><span class="p">,</span> <span class="mi">1030</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>                 <span class="n">where</span><span class="o">=</span><span class="n">xsect</span><span class="p">[</span><span class="s1">&#39;elevation&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">m</span> <span class="o">&lt;=</span> <span class="mi">1030</span><span class="p">,</span> <span class="n">facecolor</span><span class="o">=</span><span class="s1">&#39;lightgrey&#39;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>                 <span class="n">interpolate</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="c1"># Don&#39;t plot xticks</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">plt</span><span class="o">.</span><span class="n">xticks</span><span class="p">([],</span> <span class="p">[])</span>
+
+<span class="ne">NameError</span>: name &#39;xsect&#39; is not defined
+</pre></div>
+</div>
+<img alt="../../_images/6f0321e2d35497901ee209dbaf8d3a1712be4edc195bb182e05f0ab96cf5d35f.png" src="../../_images/6f0321e2d35497901ee209dbaf8d3a1712be4edc195bb182e05f0ab96cf5d35f.png" />
 </div>
 </div>
 </section>
@@ -827,9 +950,9 @@ radiosonde wind observations are plotted as barbs on this plot.</p>
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -854,14 +977,14 @@ radiosonde wind observations are plotted as barbs on this plot.</p>
       
       <li><a href="http://binder.projectpythia.org/v2/gh/ProjectPythia/cookbook-template/main?urlpath=lab/tree/notebooks/gallery/Observational_Data_Cross_Section.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
-   title="Launch onBinder"
+   title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
 >
   
 
 <span class="btn__icon-container">
   
-    <img src="../../_static/images/logo_binder.svg">
+    <img alt="Binder logo" src="../../_static/images/logo_binder.svg">
   </span>
 <span class="btn__text-container">Binder</span>
 </a>
@@ -1018,9 +1141,9 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -1055,7 +1178,7 @@ By MetPy Maintainers
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 14 May 2024.
+  Last updated on 14 June 2024.
   <br/>
 </p>
   </div>
@@ -1072,8 +1195,8 @@ By MetPy Maintainers
   </div>
     
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../../_static/scripts/bootstrap.js?digest=8d27b9dea8ad943066ae"></script>
-<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=8d27b9dea8ad943066ae"></script>
+  <script src="../../_static/scripts/bootstrap.js?digest=3ee479438cf8b5e0d341"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=3ee479438cf8b5e0d341"></script>
 
   <footer class="bd-footer">
      
@@ -1109,7 +1232,7 @@ By MetPy Maintainers
         
           By MetPy Maintainers.
         
-          Last updated on 14 May 2024.
+          Last updated on 14 June 2024.
         </p>
       </div>
     </div>
