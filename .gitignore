@@ -9,6 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
+_build/
 notebooks/_build/
 develop-eggs/
 dist/
@@ -129,3 +130,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+#MAC OS System Files 
+.DS_Store
+
+# IDEs
+.vscode/

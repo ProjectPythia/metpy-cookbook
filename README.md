@@ -12,7 +12,7 @@
 # MetPy Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml)
-[![Binder](http://binder.mypythia.org/badge_logo.svg)](http://binder.mypythia.org/v2/gh/ProjectPythia/metpy-cookbook/main?labpath=notebooks)
+[![Binder](http://binder.projectpythia.org/badge_logo.svg)](http://binder.projectpythia.org/v2/gh/ProjectPythia/metpy-cookbook/main?labpath=notebooks)
 [![DOI](https://zenodo.org/badge/620944317.svg)](https://zenodo.org/badge/latestdoi/620944317)
 
 This Cookbook is the oversized recipe book for all your MetPy needs.
