@@ -7,8 +7,6 @@
    </div>
 </div>
 
-**:warning: THIS COOKBOOK IS UNDER CONSTRUCTION :warning:**
-
 # MetPy Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml)
