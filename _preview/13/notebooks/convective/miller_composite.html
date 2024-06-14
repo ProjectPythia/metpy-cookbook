@@ -110,8 +110,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../../_static/metpy_150x150.png" class="logo__image only-light" alt="The MetPy Cookbook - Home"/>
+    <script>document.write(`<img src="../../_static/metpy_150x150.png" class="logo__image only-dark" alt="The MetPy Cookbook - Home"/>`);</script>
   
-    <p class="title logo__title">The MetPy Cookbook</p>
   
 </a></div>
     
@@ -364,6 +370,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/Ageostrophic_Wind_Example.html">Geostrophic and Ageostrophic Wind</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/Analytic_300hPa_Trough.html">Analytic 300-hPa Trough</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/Differential_Temperature_Advection.html">Differential Temperature Advection with NARR Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../synoptic/Geostrophic_Wind_And_Few_More.html">Geostrophic Wind and Other Calcuations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/Isentropic_Interpolation.html">Isentropic Analysis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/PV_baroclinic_isobaric.html">Baroclinic Potential Vorticity Analysis, Divergence, and Winds</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../synoptic/Upperair_Obs.html">DIFAX Replication</a></li>
@@ -584,9 +591,9 @@ plotting.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2539/1703524492.py:2: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_2551/1703524492.py:2: UserWarning: Vertical dimension number not found. Defaulting to (..., Z, Y, X) order.
   vort_adv_500 = mpcalc.advection(avor_500, u_500, v_500,) * 1e9
-/tmp/ipykernel_2539/1703524492.py:2: UserWarning: Latitude and longitude computed on-demand, which may be an expensive operation. To avoid repeating this computation, assign these coordinates ahead of time with .metpy.assign_latitude_longitude().
+/tmp/ipykernel_2551/1703524492.py:2: UserWarning: Latitude and longitude computed on-demand, which may be an expensive operation. To avoid repeating this computation, assign these coordinates ahead of time with .metpy.assign_latitude_longitude().
   vort_adv_500 = mpcalc.advection(avor_500, u_500, v_500,) * 1e9
 </pre></div>
 </div>
