@@ -18,3 +18,7 @@ parts:
         title: Skew-T Analysis
         sections:
           - glob: notebooks/skewt/*.ipynb
+      - file: notebooks/declarative/index
+        title: Simplified Plotting
+        sections:
+          - glob: notebooks/declarative/*.ipynb
