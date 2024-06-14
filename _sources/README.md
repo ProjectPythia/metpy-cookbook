@@ -7,13 +7,13 @@
    </div>
 </div>
 
-
 **:warning: THIS COOKBOOK IS UNDER CONSTRUCTION :warning:**
 
 # MetPy Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.projectpythia.org/badge_logo.svg)](http://binder.projectpythia.org/v2/gh/ProjectPythia/metpy-cookbook/main?labpath=notebooks)
+[![DOI](https://zenodo.org/badge/620944317.svg)](https://zenodo.org/badge/latestdoi/620944317)
 
 This Cookbook is the oversized recipe book for all your MetPy needs.
 We provide a gallery of real workflows centered around meteorological data,
@@ -33,7 +33,6 @@ MetPy Maintainers and the MetPy Community.
 ## Structure
 
 ### The MetPy Example Gallery
-
 
 ## Running the Notebooks
 
