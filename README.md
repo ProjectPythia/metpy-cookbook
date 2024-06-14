@@ -3,7 +3,7 @@
       <img src="_static/NSF-Unidata_lockup_horizontal_2023_light.png" alt="NSF-Unidata Logo" width="35%"/>
    </div>
    <div class="column">
-      <img src="_static/metpy_150x150.png" alt="MetPy Logo" width="100%"/>
+      <img src="_static/metpy_150x150.png" alt="MetPy Logo" width="35%"/>
    </div>
 </div>
 
