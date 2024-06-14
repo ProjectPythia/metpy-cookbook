@@ -1,9 +1,9 @@
 <div class="row">
    <div class="column">
-      <img src="pythia.png" alt="Project Pythia Logo" width="35%"/>
+      <img src="_static/NSF-Unidata_lockup_horizontal_2023_light.png" alt="NSF-Unidata Logo" width="35%"/>
    </div>
    <div class="column">
-      <img src="unidata.png" alt="Unidata Logo" width="35%"/>
+      <img src="_static/metpy_150x150.png" alt="MetPy Logo" width="100%"/>
    </div>
 </div>
 
