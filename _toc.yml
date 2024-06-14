@@ -13,7 +13,7 @@ parts:
       - file: notebooks/skewt/index
         title: Skew-T Analysis
         sections:
-          - glob: notebooks/skewt/*.ipynb
+          - glob: notebooks/skewt/*
       - file: notebooks/convective/index
         title: Convective Calculations
         sections:
@@ -25,4 +25,4 @@ parts:
       - file: notebooks/declarative/index
         title: Simplified Plotting
         sections:
-          - glob: notebooks/declarative/*.ipynb
+          - glob: notebooks/declarative/*
