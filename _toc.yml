@@ -6,18 +6,22 @@ parts:
       - file: notebooks/how-to-cite
   - caption: The MetPy Gallery
     chapters:
-      - file: notebooks/notebook-template
-        title: What organization
+      - file: notebooks/synoptic/index
+        title: Synoptic Analysis
         sections:
-          - glob: notebooks/gallery/*
-      - file: notebooks/gallery/index1
-        title: do we want
-      - file: notebooks/gallery/index2
-        title: for these "chapters"?
+          - glob: notebooks/synoptic/*
       - file: notebooks/skewt/index
         title: Skew-T Analysis
         sections:
           - glob: notebooks/skewt/*.ipynb
+      - file: notebooks/convective/index
+        title: Convective Calculations
+        sections:
+          - glob: notebooks/convective/*
+      - file: notebooks/specialty/index
+        title: Specialty Plotting
+        sections:
+          - glob: notebooks/specialty/*
       - file: notebooks/declarative/index
         title: Simplified Plotting
         sections:
