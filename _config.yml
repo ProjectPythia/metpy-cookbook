@@ -7,19 +7,6 @@ logo: pythia.png
 email: support-python@unidata.ucar.edu
 copyright: "2024"
 
-description: A sample cookbook description.
-thumbnail: metpy.png
-tags:
-  domains:
-    - meteorology
-    - data access
-  packages:
-    - metpy
-    - siphon
-    - cartopy
-    - xarray
-    - pint
-
 execute:
   # To execute notebooks via a binder instead, replace 'cache' with 'binder'
   execute_notebooks: cache
@@ -50,7 +37,7 @@ sphinx:
     html_permalinks_icon: '<i class="fas fa-link"></i>'
     html_theme_options:
       home_page_in_toc: true
-      repository_url: https://github.com/ProjectPythia/cookbook-template/ # Online location of your book
+      repository_url: https://github.com/ProjectPythia/metpy-cookbook/ # Online location of your book
       repository_branch: main # Which branch of the repository should be used when creating links (optional)
       use_issues_button: true
       use_repository_button: true
