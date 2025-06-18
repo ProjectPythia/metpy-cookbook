@@ -1,3 +1,5 @@
+# MetPy Cookbook
+
 <div class="row">
    <div class="column">
       <img src="_static/NSF-Unidata_lockup_horizontal_2023_light.png" alt="NSF-Unidata Logo" width="35%"/>
@@ -6,8 +8,6 @@
       <img src="_static/metpy_150x150.png" alt="MetPy Logo" width="35%"/>
    </div>
 </div>
-
-# MetPy Cookbook
 
 [![nightly-build](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml/badge.svg)](https://github.com/ProjectPythia/metpy-cookbook/actions/workflows/nightly-build.yaml)
 [![Binder](http://binder.projectpythia.org/badge_logo.svg)](http://binder.projectpythia.org/v2/gh/ProjectPythia/metpy-cookbook/main?labpath=notebooks)
