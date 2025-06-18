@@ -15,3 +15,4 @@ dependencies:
   - siphon
   - xarray
   - sphinx-pythia-theme
+  - mystmd
