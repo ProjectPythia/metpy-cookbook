@@ -1,11 +1,11 @@
 version: 1
 extends:
-  - https://raw.githubusercontent.com/projectpythia-mystmd/pythia-config/main/pythia.yml
+  - https://raw.githubusercontent.com/projectpythia/pythia-config/main/pythia.yml
 project:
   title: The MetPy Cookbook
   authors:
     - name: MetPy Maintainers
-  github: https://github.com/projectpythia-mystmd/metpy-cookbook
+  github: https://github.com/projectpythia/metpy-cookbook
   copyright: '2024'
   toc:
     - file: README.md
@@ -36,9 +36,4 @@ project:
             - pattern: notebooks/declarative/*
   jupyter:
       binder:
-        repo: projectpythia-mystmd/metpy-cookbook
-site:
-  options:
-    logo: _static/metpy_150x150.png
-    folders: true
-  template: book-theme
+        repo: projectpythia/metpy-cookbook
