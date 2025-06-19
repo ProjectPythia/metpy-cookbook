@@ -14,4 +14,4 @@ dependencies:
   - scipy
   - siphon
   - xarray
-  - sphinx-pythia-theme
+  - mystmd
