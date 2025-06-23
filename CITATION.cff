@@ -2,12 +2,8 @@ cff-version: 1.2.0
 message: "If you use this cookbook, please cite it as below."
 authors:
   # add additional entries for each author -- see https://github.com/citation-file-format/citation-file-format/blob/main/schema-guide.md
-  - family-names: Camron
-    given-names: Drew
-    orcid: https://orcid.org/0000-0001-7246-6502
-    website: https://github.com/dcamron
-    affiliation: UCAR/Unidata
   - name: "Metpy Cookbook contributors" # use the 'name' field to acknowledge organizations
     website: "https://github.com/ProjectPythia/metpy-cookbook/graphs/contributors"
 title: "Metpy Cookbook"
-abstract: "A sample cookbook description."
+abstract: "We provide a gallery of real workflows centered around meteorological data,
+  and the building blocks you need to recreate those workflows or cook up brand new ones yourself."
