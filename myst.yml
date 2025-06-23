@@ -6,34 +6,36 @@ project:
   authors:
     - name: MetPy Maintainers
   github: https://github.com/projectpythia/metpy-cookbook
-  copyright: '2024'
+  copyright: '2025'
+  jupyter:
+    binder:
+      repo: projectpythia/metpy-cookbook
+  settings:
+    output_matplotlib_strings: 'remove'
   toc:
     - file: README.md
     - title: Preamble
       children:
-        - file: notebooks/how-to-cite
+        - file: notebooks/how-to-cite.md
     - title: The MetPy Gallery
       children:
         - file: notebooks/synoptic/index.md
           title: Synoptic Analysis
           children:
-            - pattern: notebooks/synoptic/*
+            - pattern: notebooks/synoptic/*.ipynb
         - file: notebooks/skewt/index.md
           title: Skew-T Analysis
           children:
-            - pattern: notebooks/skewt/*
+            - pattern: notebooks/skewt/*.ipynb
         - file: notebooks/convective/index.md
           title: Convective Calculations
           children:
-            - pattern: notebooks/convective/*
+            - pattern: notebooks/convective/*.ipynb
         - file: notebooks/specialty/index.md
           title: Specialty Plotting
           children:
-            - pattern: notebooks/specialty/*
+            - pattern: notebooks/specialty/*.ipynb
         - file: notebooks/declarative/index.md
           title: Simplified Plotting
           children:
-            - pattern: notebooks/declarative/*
-  jupyter:
-      binder:
-        repo: projectpythia/metpy-cookbook
+            - pattern: notebooks/declarative/*.ipynb
