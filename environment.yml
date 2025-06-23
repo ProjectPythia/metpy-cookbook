@@ -4,14 +4,13 @@ channels:
 dependencies:
   - cartopy
   - geopandas
-  - jupyter_server<2
-  - jupyter-book
   - jupyterlab
+  - jupyterlab-myst
   - matplotlib
   - metpy
+  - mystmd
   - numpy
   - pandas
   - scipy
   - siphon
   - xarray
-  - mystmd
