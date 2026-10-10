@@ -1,0 +1,235 @@
+[31m---------------------------------------------------------------------------[39m
+[31mConnectionResetError[39m                      Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connectionpool.py:793[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    792[39m [38;5;66;03m# Make the request on the HTTPConnection object[39;00m
+[32m--> [39m[32m793[39m response = [30;43mself[39;49m[30;43m.[39;49m[30;43m_make_request[39;49m[30;43m([39;49m
+[32m    794[39m [30;43m    [39;49m[30;43mconn[39;49m[30;43m,[39;49m
+[32m    795[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    796[39m [30;43m    [39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    797[39m [30;43m    [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mtimeout_obj[39;49m[30;43m,[39;49m
+[32m    798[39m [30;43m    [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mbody[39;49m[30;43m,[39;49m
+[32m    799[39m [30;43m    [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mheaders[39;49m[30;43m,[39;49m
+[32m    800[39m [30;43m    [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    801[39m [30;43m    [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mretries[39;49m[30;43m,[39;49m
+[32m    802[39m [30;43m    [39;49m[30;43mresponse_conn[39;49m[30;43m=[39;49m[30;43mresponse_conn[39;49m[30;43m,[39;49m
+[32m    803[39m [30;43m    [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43mpreload_content[39;49m[30;43m,[39;49m
+[32m    804[39m [30;43m    [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43mdecode_content[39;49m[30;43m,[39;49m
+[32m    805[39m [30;43m    [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mresponse_kw[39;49m[30;43m,[39;49m
+[32m    806[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    808[39m [38;5;66;03m# Everything went great![39;00m
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connectionpool.py:540[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    539[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m540[39m     response = [30;43mconn[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    541[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connection.py:638[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m    637[39m [38;5;66;03m# Get the response from http.client.HTTPConnection[39;00m
+[32m--> [39m[32m638[39m httplib_response = [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    640[39m [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/http/client.py:1478[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m   1477[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1478[39m     [30;43mresponse[39;49m[30;43m.[39;49m[30;43mbegin[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m   1479[39m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/http/client.py:343[39m, in [36mHTTPResponse.begin[39m[34m(self)[39m
+[32m    342[39m [38;5;28;01mfor[39;00m _ [38;5;129;01min[39;00m [38;5;28mrange[39m(_MAXINTERIMRESPONSES):
+[32m--> [39m[32m343[39m     version, status, reason = [30;43mself[39;49m[30;43m.[39;49m[30;43m_read_status[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    344[39m     [38;5;28;01mif[39;00m status != CONTINUE:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/http/client.py:304[39m, in [36mHTTPResponse._read_status[39m[34m(self)[39m
+[32m    303[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_read_status[39m([38;5;28mself[39m):
+[32m--> [39m[32m304[39m     line = [38;5;28mstr[39m([30;43mself[39;49m[30;43m.[39;49m[30;43mfp[39;49m[30;43m.[39;49m[30;43mreadline[39;49m[30;43m([39;49m[30;43m_MAXLINE[39;49m[30;43m [39;49m[30;43m+[39;49m[30;43m [39;49m[30;43m1[39;49m[30;43m)[39;49m, [33m"[39m[33miso-8859-1[39m[33m"[39m)
+[32m    305[39m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(line) > _MAXLINE:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/socket.py:729[39m, in [36mSocketIO.readinto[39m[34m(self, b)[39m
+[32m    728[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m729[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_sock[39;49m[30;43m.[39;49m[30;43mrecv_into[39;49m[30;43m([39;49m[30;43mb[39;49m[30;43m)[39;49m
+[32m    730[39m [38;5;28;01mexcept[39;00m timeout:
+
+[31mConnectionResetError[39m: [Errno 104] Connection reset by peer
+
+During handling of the above exception, another exception occurred:
+
+[31mProtocolError[39m                             Traceback (most recent call last)
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/requests/adapters.py:696[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    695[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m696[39m     resp = [30;43mconn[39;49m[30;43m.[39;49m[30;43murlopen[39;49m[30;43m([39;49m
+[32m    697[39m [30;43m        [39;49m[30;43mmethod[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    698[39m [30;43m        [39;49m[30;43murl[39;49m[30;43m=[39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    699[39m [30;43m        [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mbody[39;49m[30;43m,[39;49m[30;43m  [39;49m[30;43;03m# type: ignore[arg-type]  # urllib3 stubs don't accept Iterable[bytes | str][39;49;00m
+[32m    700[39m [30;43m        [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mrequest[39;49m[30;43m.[39;49m[30;43mheaders[39;49m[30;43m,[39;49m[30;43m  [39;49m[30;43;03m# type: ignore[arg-type]  # urllib3#3072[39;49;00m
+[32m    701[39m [30;43m        [39;49m[30;43mredirect[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    702[39m [30;43m        [39;49m[30;43massert_same_host[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    703[39m [30;43m        [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    704[39m [30;43m        [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43;01mFalse[39;49;00m[30;43m,[39;49m
+[32m    705[39m [30;43m        [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43mmax_retries[39;49m[30;43m,[39;49m
+[32m    706[39m [30;43m        [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mresolved_timeout[39;49m[30;43m,[39;49m
+[32m    707[39m [30;43m        [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    708[39m [30;43m    [39;49m[30;43m)[39;49m
+[32m    710[39m [38;5;28;01mexcept[39;00m (ProtocolError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m err:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connectionpool.py:847[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    845[39m     new_e = ProtocolError([33m"[39m[33mConnection aborted.[39m[33m"[39m, new_e)
+[32m--> [39m[32m847[39m retries = [30;43mretries[39;49m[30;43m.[39;49m[30;43mincrement[39;49m[30;43m([39;49m
+[32m    848[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merror[39;49m[30;43m=[39;49m[30;43mnew_e[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_pool[39;49m[30;43m=[39;49m[30;43mself[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_stacktrace[39;49m[30;43m=[39;49m[30;43msys[39;49m[30;43m.[39;49m[30;43mexc_info[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m[[39;49m[30;43m2[39;49m[30;43m][39;49m
+[32m    849[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    850[39m retries.sleep()
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/util/retry.py:510[39m, in [36mRetry.increment[39m[34m(self, method, url, response, error, _pool, _stacktrace)[39m
+[32m    509[39m [38;5;28;01mif[39;00m read [38;5;129;01mis[39;00m [38;5;28;01mFalse[39;00m [38;5;129;01mor[39;00m method [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m [38;5;129;01mor[39;00m [38;5;129;01mnot[39;00m [38;5;28mself[39m._is_method_retryable(method):
+[32m--> [39m[32m510[39m     [38;5;28;01mraise[39;00m [30;43mreraise[39;49m[30;43m([39;49m[30;43mtype[39;49m[30;43m([39;49m[30;43merror[39;49m[30;43m)[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43merror[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m_stacktrace[39;49m[30;43m)[39;49m
+[32m    511[39m [38;5;28;01melif[39;00m read [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/util/util.py:38[39m, in [36mreraise[39m[34m(tp, value, tb)[39m
+[32m     37[39m [38;5;28;01mif[39;00m value.__traceback__ [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m tb:
+[32m---> [39m[32m38[39m     [38;5;28;01mraise[39;00m value.with_traceback(tb)
+[32m     39[39m [38;5;28;01mraise[39;00m value
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connectionpool.py:793[39m, in [36mHTTPConnectionPool.urlopen[39m[34m(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)[39m
+[32m    792[39m [38;5;66;03m# Make the request on the HTTPConnection object[39;00m
+[32m--> [39m[32m793[39m response = [30;43mself[39;49m[30;43m.[39;49m[30;43m_make_request[39;49m[30;43m([39;49m
+[32m    794[39m [30;43m    [39;49m[30;43mconn[39;49m[30;43m,[39;49m
+[32m    795[39m [30;43m    [39;49m[30;43mmethod[39;49m[30;43m,[39;49m
+[32m    796[39m [30;43m    [39;49m[30;43murl[39;49m[30;43m,[39;49m
+[32m    797[39m [30;43m    [39;49m[30;43mtimeout[39;49m[30;43m=[39;49m[30;43mtimeout_obj[39;49m[30;43m,[39;49m
+[32m    798[39m [30;43m    [39;49m[30;43mbody[39;49m[30;43m=[39;49m[30;43mbody[39;49m[30;43m,[39;49m
+[32m    799[39m [30;43m    [39;49m[30;43mheaders[39;49m[30;43m=[39;49m[30;43mheaders[39;49m[30;43m,[39;49m
+[32m    800[39m [30;43m    [39;49m[30;43mchunked[39;49m[30;43m=[39;49m[30;43mchunked[39;49m[30;43m,[39;49m
+[32m    801[39m [30;43m    [39;49m[30;43mretries[39;49m[30;43m=[39;49m[30;43mretries[39;49m[30;43m,[39;49m
+[32m    802[39m [30;43m    [39;49m[30;43mresponse_conn[39;49m[30;43m=[39;49m[30;43mresponse_conn[39;49m[30;43m,[39;49m
+[32m    803[39m [30;43m    [39;49m[30;43mpreload_content[39;49m[30;43m=[39;49m[30;43mpreload_content[39;49m[30;43m,[39;49m
+[32m    804[39m [30;43m    [39;49m[30;43mdecode_content[39;49m[30;43m=[39;49m[30;43mdecode_content[39;49m[30;43m,[39;49m
+[32m    805[39m [30;43m    [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mresponse_kw[39;49m[30;43m,[39;49m
+[32m    806[39m [30;43m[39;49m[30;43m)[39;49m
+[32m    808[39m [38;5;66;03m# Everything went great![39;00m
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connectionpool.py:540[39m, in [36mHTTPConnectionPool._make_request[39m[34m(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)[39m
+[32m    539[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m540[39m     response = [30;43mconn[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    541[39m [38;5;28;01mexcept[39;00m (BaseSSLError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m e:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/urllib3/connection.py:638[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m    637[39m [38;5;66;03m# Get the response from http.client.HTTPConnection[39;00m
+[32m--> [39m[32m638[39m httplib_response = [30;43msuper[39;49m[30;43m([39;49m[30;43m)[39;49m[30;43m.[39;49m[30;43mgetresponse[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    640[39m [38;5;28;01mtry[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/http/client.py:1478[39m, in [36mHTTPConnection.getresponse[39m[34m(self)[39m
+[32m   1477[39m [38;5;28;01mtry[39;00m:
+[32m-> [39m[32m1478[39m     [30;43mresponse[39;49m[30;43m.[39;49m[30;43mbegin[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m   1479[39m [38;5;28;01mexcept[39;00m [38;5;167;01mConnectionError[39;00m:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/http/client.py:343[39m, in [36mHTTPResponse.begin[39m[34m(self)[39m
+[32m    342[39m [38;5;28;01mfor[39;00m _ [38;5;129;01min[39;00m [38;5;28mrange[39m(_MAXINTERIMRESPONSES):
+[32m--> [39m[32m343[39m     version, status, reason = [30;43mself[39;49m[30;43m.[39;49m[30;43m_read_status[39;49m[30;43m([39;49m[30;43m)[39;49m
+[32m    344[39m     [38;5;28;01mif[39;00m status != CONTINUE:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/http/client.py:304[39m, in [36mHTTPResponse._read_status[39m[34m(self)[39m
+[32m    303[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_read_status[39m([38;5;28mself[39m):
+[32m--> [39m[32m304[39m     line = [38;5;28mstr[39m([30;43mself[39;49m[30;43m.[39;49m[30;43mfp[39;49m[30;43m.[39;49m[30;43mreadline[39;49m[30;43m([39;49m[30;43m_MAXLINE[39;49m[30;43m [39;49m[30;43m+[39;49m[30;43m [39;49m[30;43m1[39;49m[30;43m)[39;49m, [33m"[39m[33miso-8859-1[39m[33m"[39m)
+[32m    305[39m     [38;5;28;01mif[39;00m [38;5;28mlen[39m(line) > _MAXLINE:
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/socket.py:729[39m, in [36mSocketIO.readinto[39m[34m(self, b)[39m
+[32m    728[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m729[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43m_sock[39;49m[30;43m.[39;49m[30;43mrecv_into[39;49m[30;43m([39;49m[30;43mb[39;49m[30;43m)[39;49m
+[32m    730[39m [38;5;28;01mexcept[39;00m timeout:
+
+[31mProtocolError[39m: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+
+During handling of the above exception, another exception occurred:
+
+[31mConnectionError[39m                           Traceback (most recent call last)
+[36mCell[39m[36m [39m[32mIn[3][39m[32m, line 2[39m
+[32m      1[39m [38;5;66;03m# Read remote sounding data based on preferred_date and station[39;00m
+[32m----> [39m[32m2[39m sounding_data = WyomingUpperAir.request_data(preferred_date, station)
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/siphon/simplewebservice/wyoming.py:52[39m, in [36mWyomingUpperAir.request_data[39m[34m(cls, time, site_id, recalc, **kwargs)[39m
+[32m     26[39m [38;5;250m[39m[33mr[39m[33;03m"""Retrieve upper air observations from the Wyoming archive.[39;00m
+[32m     27[39m 
+[32m     28[39m [33;03mParameters[39;00m
+[32m   (...)[39m[32m     49[39m 
+[32m     50[39m [33;03m"""[39;00m
+[32m     51[39m endpoint = [38;5;28mcls[39m()
+[32m---> [39m[32m52[39m df = [30;43mendpoint[39;49m[30;43m.[39;49m[30;43m_get_data[39;49m[30;43m([39;49m[30;43mtime[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43msite_id[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mrecalc[39;49m[30;43m=[39;49m[30;43mrecalc[39;49m[30;43m)[39;49m
+[32m     53[39m [38;5;28;01mreturn[39;00m df
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/siphon/simplewebservice/wyoming.py:75[39m, in [36mWyomingUpperAir._get_data[39m[34m(self, time, site_id, recalc)[39m
+[32m     55[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34m_get_data[39m([38;5;28mself[39m, time, site_id, recalc=[38;5;28;01mFalse[39;00m):
+[32m     56[39m [38;5;250m    [39m[33mr[39m[33;03m"""Download and parse upper air observations from an online archive.[39;00m
+[32m     57[39m 
+[32m     58[39m [33;03m    Parameters[39;00m
+[32m   (...)[39m[32m     73[39m 
+[32m     74[39m [33;03m    """[39;00m
+[32m---> [39m[32m75[39m     raw_data = [30;43mself[39;49m[30;43m.[39;49m[30;43m_get_data_raw[39;49m[30;43m([39;49m[30;43mtime[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43msite_id[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mrecalc[39;49m[30;43m=[39;49m[30;43mrecalc[39;49m[30;43m)[39;49m
+[32m     77[39m     [38;5;66;03m# Parse CSV. skipinitialspace is used to handle missing data being encoded by just[39;00m
+[32m     78[39m     [38;5;66;03m# having spaces in the field[39;00m
+[32m     79[39m     df = pd.read_csv(StringIO(raw_data), parse_dates=[[33m'[39m[33mtime[39m[33m'[39m],
+[32m     80[39m                      date_format=[33m'[39m[33m%[39m[33mY-[39m[33m%[39m[33mm-[39m[38;5;132;01m%d[39;00m[33m [39m[33m%[39m[33mH:[39m[33m%[39m[33mM:[39m[33m%[39m[33mS[39m[33m'[39m, skipinitialspace=[38;5;28;01mTrue[39;00m,
+[32m     81[39m                      na_values={[33m'[39m[33mlatitude[39m[33m'[39m:[33m'[39m[33m-99.9900[39m[33m'[39m, [33m'[39m[33mlongitude[39m[33m'[39m:[33m'[39m[33m-99.9900[39m[33m'[39m})
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/siphon/simplewebservice/wyoming.py:139[39m, in [36mWyomingUpperAir._get_data_raw[39m[34m(self, time, site_id, recalc)[39m
+[32m    136[39m     path += [33m'[39m[33m&REPLOT=1[39m[33m'[39m
+[32m    138[39m [38;5;28;01mtry[39;00m:
+[32m--> [39m[32m139[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mget_path[39;49m[30;43m([39;49m[30;43mpath[39;49m[30;43m)[39;49m.text
+[32m    140[39m [38;5;28;01mexcept[39;00m requests.HTTPError [38;5;28;01mas[39;00m e:
+[32m    141[39m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m [38;5;28;01mfrom[39;00m[38;5;250m [39m[34;01me[39;00m
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/siphon/http_util.py:453[39m, in [36mHTTPEndPoint.get_path[39m[34m(self, path, query)[39m
+[32m    430[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mget_path[39m([38;5;28mself[39m, path, query=[38;5;28;01mNone[39;00m):
+[32m    431[39m [38;5;250m    [39m[33;03m"""Make a GET request, optionally including a query, to a relative path.[39;00m
+[32m    432[39m 
+[32m    433[39m [33;03m    The path of the request includes a path on top of the base URL[39;00m
+[32m   (...)[39m[32m    451[39m 
+[32m    452[39m [33;03m    """[39;00m
+[32m--> [39m[32m453[39m     [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mget[39;49m[30;43m([39;49m[30;43mself[39;49m[30;43m.[39;49m[30;43murl_path[39;49m[30;43m([39;49m[30;43mpath[39;49m[30;43m)[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mquery[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/siphon/http_util.py:482[39m, in [36mHTTPEndPoint.get[39m[34m(self, path, params)[39m
+[32m    455[39m [38;5;28;01mdef[39;00m[38;5;250m [39m[34mget[39m([38;5;28mself[39m, path, params=[38;5;28;01mNone[39;00m):
+[32m    456[39m [38;5;250m    [39m[33;03m"""Make a GET request, optionally including a parameters, to a path.[39;00m
+[32m    457[39m 
+[32m    458[39m [33;03m    The path of the request is the full URL.[39;00m
+[32m   (...)[39m[32m    480[39m 
+[32m    481[39m [33;03m    """[39;00m
+[32m--> [39m[32m482[39m     resp = [30;43mself[39;49m[30;43m.[39;49m[30;43m_session[39;49m[30;43m.[39;49m[30;43mget[39;49m[30;43m([39;49m[30;43mpath[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mparams[39;49m[30;43m=[39;49m[30;43mparams[39;49m[30;43m)[39;49m
+[32m    483[39m     [38;5;28;01mif[39;00m resp.status_code != [32m200[39m:
+[32m    484[39m         [38;5;28;01mif[39;00m resp.headers.get([33m'[39m[33mContent-Type[39m[33m'[39m, [33m'[39m[33m'[39m).startswith([33m'[39m[33mtext/html[39m[33m'[39m):
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/requests/sessions.py:671[39m, in [36mSession.get[39m[34m(self, url, params, **kwargs)[39m
+[32m    661[39m [38;5;250m[39m[33mr[39m[33;03m"""Sends a GET request. Returns :class:`Response` object.[39;00m
+[32m    662[39m 
+[32m    663[39m [33;03m:param url: URL for the new :class:`Request` object.[39;00m
+[32m   (...)[39m[32m    667[39m [33;03m:rtype: requests.Response[39;00m
+[32m    668[39m [33;03m"""[39;00m
+[32m    670[39m kwargs.setdefault([33m"[39m[33mallow_redirects[39m[33m"[39m, [38;5;28;01mTrue[39;00m)
+[32m--> [39m[32m671[39m [38;5;28;01mreturn[39;00m [30;43mself[39;49m[30;43m.[39;49m[30;43mrequest[39;49m[30;43m([39;49m[30;43m"[39;49m[30;43mGET[39;49m[30;43m"[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43murl[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43mparams[39;49m[30;43m=[39;49m[30;43mparams[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/requests/sessions.py:651[39m, in [36mSession.request[39m[34m(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)[39m
+[32m    646[39m send_kwargs = {
+[32m    647[39m     [33m"[39m[33mtimeout[39m[33m"[39m: timeout,
+[32m    648[39m     [33m"[39m[33mallow_redirects[39m[33m"[39m: allow_redirects,
+[32m    649[39m }
+[32m    650[39m send_kwargs.update(settings)
+[32m--> [39m[32m651[39m resp = [30;43mself[39;49m[30;43m.[39;49m[30;43msend[39;49m[30;43m([39;49m[30;43mprep[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43msend_kwargs[39;49m[30;43m)[39;49m
+[32m    653[39m [38;5;28;01mreturn[39;00m resp
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/requests/sessions.py:784[39m, in [36mSession.send[39m[34m(self, request, **kwargs)[39m
+[32m    781[39m start = preferred_clock()
+[32m    783[39m [38;5;66;03m# Send the request[39;00m
+[32m--> [39m[32m784[39m r = [30;43madapter[39;49m[30;43m.[39;49m[30;43msend[39;49m[30;43m([39;49m[30;43mrequest[39;49m[30;43m,[39;49m[30;43m [39;49m[30;43m*[39;49m[30;43m*[39;49m[30;43mkwargs[39;49m[30;43m)[39;49m
+[32m    786[39m [38;5;66;03m# Total elapsed time of the request (approximately)[39;00m
+[32m    787[39m elapsed = preferred_clock() - start
+
+[36mFile [39m[32m~/micromamba/envs/metpy-cookbook/lib/python3.14/site-packages/requests/adapters.py:711[39m, in [36mHTTPAdapter.send[39m[34m(self, request, stream, timeout, verify, cert, proxies)[39m
+[32m    696[39m     resp = conn.urlopen(
+[32m    697[39m         method=request.method,
+[32m    698[39m         url=url,
+[32m   (...)[39m[32m    707[39m         chunked=chunked,
+[32m    708[39m     )
+[32m    710[39m [38;5;28;01mexcept[39;00m (ProtocolError, [38;5;167;01mOSError[39;00m) [38;5;28;01mas[39;00m err:
+[32m--> [39m[32m711[39m     [38;5;28;01mraise[39;00m [38;5;167;01mConnectionError[39;00m(err, request=request)
+[32m    713[39m [38;5;28;01mexcept[39;00m MaxRetryError [38;5;28;01mas[39;00m e:
+[32m    714[39m     [38;5;28;01mif[39;00m [38;5;28misinstance[39m(e.reason, ConnectTimeoutError):
+[32m    715[39m         [38;5;66;03m# TODO: Remove this in 3.0.0: see #2811[39;00m
+
+[31mConnectionError[39m: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
